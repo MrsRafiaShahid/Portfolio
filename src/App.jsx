@@ -1,3 +1,5 @@
+import { Footer, Navbar } from "./components"
+import Routing from "./Routing"
 
 
 function App() {
@@ -5,7 +7,9 @@ function App() {
 
   return (
     <>
-      
+      <Navbar/>
+      <Routing/>
+      <Footer/>
     </>
   )
 }
