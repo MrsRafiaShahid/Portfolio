@@ -23,8 +23,9 @@ const FeedbackCard = ({
     if (inView) {
       api.start({
         to: { opacity: 1, transform: "translateY(0px)" },
-        config: { mass: 1, tension: 170, friction: 26 },
-        delay: index * 300,
+        config: { mass: 1, tension: 170, friction: 26 ,duration:200},
+        delay: index * 100,
+        // immediate:true
       });
     } else {
       api.start({
@@ -37,16 +38,15 @@ const FeedbackCard = ({
       <animated.div
         ref={ref}
         style={styles}
-        className="bg-black/20 text-white rounded-3xl md:w-[320px] w-full"
+        className="bg-tertiary/20 text-white mt-20 rounded-3xl md:w-[320px] w-full"
       >
-        <p className="text-[48px] bg-black/20  rounded-t-3xl text-white ">"</p>
+        <p className="text-[48px] px-4 bg-black/20  rounded-t-3xl text-white ">"</p>
         <div className="mt-1">
-          <p className="text-white text-2xl tracking-wider text-[18px]">
+          <p className="text-white text-2xl px-4 py-2 tracking-wider text-[18px]">
             {testimonial}
           </p>
-          <div className="flex-1 flex flex-col">
+          <div className="flex-1 mt-7 px-4  py-2 flex flex-col">
             <p className="text-white font-medium text-[16px]">
-              {" "}
               <span className="blue-text-gradient">@</span>
               {name}
             </p>

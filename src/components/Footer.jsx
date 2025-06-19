@@ -3,9 +3,9 @@ import React from "react";
 const Footer = () => {
   return (
     <>
-    <div className="w-full h-full text-white">
+    <div className="w-full h-full text-white px-8 py-6">
 
-      <div className="bg-teritary grid md:grid-cols-3 grid-cols-1 gap-5 con">
+      <div className=" grid md:grid-cols-3 grid-cols-1 gap-5">
         <a href="http://terms&policy" target="_blank" rel="noopener noreferrer">
           Terms & Policy
         </a>
@@ -16,12 +16,12 @@ const Footer = () => {
           Contact ME
         </a>
       </div>
-        <div className=" con ">
-          <h4>Get in Touch</h4>
-          <div className=" grid md:grid-cols-3 grid-cols-2 gap-5 con">
+        <div className=" px-8 py-6 ">
+          <h4 className="text-2xl">Get in Touch</h4>
+          <div className=" grid md:grid-cols-3 grid-cols-2 gap-5 px-8 py-6">
 
           <p>Linkedln</p>
-          <p>Git Hub</p>
+          <p>Git</p>
           <p>Instagram</p>
           <p>Twitter</p>
           </div>

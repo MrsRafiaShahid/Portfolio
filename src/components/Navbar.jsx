@@ -20,7 +20,7 @@ const location = useLocation()
 
           <li
             key={id}
-            className="px-10 py-6 text-gray-200 transition-colors"
+            className="px-10 py-4 text-gray-200 transition-colors"
             onClick={() => handleActiveLink(id)}
           >
             <NavLink
@@ -51,16 +51,16 @@ const Navbar = () => {
   return (
     <>
       <header className="relative z-50 ">
-        <div className="mx-auto flex items-center justify-around  border-b-2 border-gray-100 ">
+        <div className="mx-auto flex items-center justify-around  ">
           <Link
             to="/"
-            className="logo w-20 mx-auto flex items-center justify-center"
+            className="logo  mx-auto flex items-center justify-center"
             onClick={()=>{window.scrollTo(0,0)}}
           >
             <img
               src={logo}
               alt="logo"
-              className="w-10 h-10 mt-4 rounded-full"
+              className="w-10 h-10  rounded-full"
             />
             &nbsp;
             <span className="flex items-center justify-center font-extrabold head-text">

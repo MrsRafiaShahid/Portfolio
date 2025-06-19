@@ -14,8 +14,7 @@ const ServiceCard = ({ title, index, icon }) => {
     opacity: 0,
     x: -100,
     transform: "perspective(600px) rotateX(0deg) rotateY(0deg) scale(1)",
-    config: { mass: 5, tension: 300, friction: 40 },
-    
+    config: { mass: 5, tension: 300, friction: 40, duration: 200 },
   }));
 
   useEffect(() => {
@@ -24,6 +23,8 @@ const ServiceCard = ({ title, index, icon }) => {
         opacity: 1,
         x: 0,
         delay: index * 200,
+
+        // immediate:true,
       });
     } else {
       api.start({
@@ -57,7 +58,7 @@ const ServiceCard = ({ title, index, icon }) => {
           style={springStyles}
           className="w-full green-pink-gradient  glow-effect shadow-card  rounded-[20px] "
         >
-          <div className="bg-tertiary  will-change-transform rounded-[20px] py-5 px-12 min-h-[280px] flex flex-col justify-evenly items-center">
+          <div className="bg-tertiary will-change-transform rounded-[20px] py-5 px-12 min-h-[280px] flex flex-col justify-evenly items-center">
             <img src={icon} alt={title} className="w-16 h-16 object-contain" />
             <h3 className="text-white text-[20px] font-bold text-center">
               {title}

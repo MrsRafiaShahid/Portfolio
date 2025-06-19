@@ -18,6 +18,7 @@ import ServiceCard from "./About/ServiceCard.jsx";
 import Tech from "./About/Tech.jsx";
 import Testimonials from "./About/Testimonials.jsx";
 import FeedbackCard from "./About/FeedbackCard.jsx";
+import Experience from "./Project/Experience.jsx";
 export {
   ComputerCanvas,
   StarsCanvas,
@@ -37,4 +38,5 @@ export {
   Tech,
   Testimonials,
   FeedbackCard,
+  Experience,
 };
