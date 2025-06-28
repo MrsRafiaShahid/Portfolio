@@ -11,11 +11,10 @@ import SectionWrapper from "../hoc/SectionWrapper.jsx";
 const About = () => {
   return (
     <>
-      <div className="w-full h-10"></div>
       <AboutHero />
       <AboutSection />
       <Tech />
-    
+
       <Testimonials />
     </>
   );

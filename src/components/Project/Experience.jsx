@@ -1,6 +1,5 @@
 /* eslint-disable no-unused-vars */
 import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { experiences } from "../../constants";
 import Timeline from "./Timeline";

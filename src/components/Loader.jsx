@@ -5,9 +5,10 @@ const Loader = () => {
   return (
     <>
       <Html>
-        <span className="canvas-loader"></span>
+        <span class="custom-loading-dots"></span>
+
         <p className="text-xl text-center text-amber-200 font-bold mt-10">
-       {Math.floor(progress/100 * 100)}%
+          {Math.floor((progress / 100) * 100)}%
         </p>
       </Html>
     </>

@@ -19,6 +19,7 @@ import Tech from "./About/Tech.jsx";
 import Testimonials from "./About/Testimonials.jsx";
 import FeedbackCard from "./About/FeedbackCard.jsx";
 import Experience from "./Project/Experience.jsx";
+import Project from "./Project/Project.jsx";
 export {
   ComputerCanvas,
   StarsCanvas,
@@ -39,4 +40,5 @@ export {
   Testimonials,
   FeedbackCard,
   Experience,
+  Project
 };

@@ -15,6 +15,13 @@ import {
   tailwind,
   nodejs,
   mongodb,
+  jobit,
+  insta,
+  fb,
+  x,
+  linkedlin,
+  threejs,
+  redux,
 } from "../assets";
 
 export const navlinks = [
@@ -87,8 +94,6 @@ export const services = [
 export const experiences = [
   {
     title: "React.js Developer",
-    // company_name: "Starbucks",
-    lineColor: " rgb(52, 141, 163)",
     icon: reactjs,
     iconBg: "#383E56",
     points: [
@@ -102,8 +107,6 @@ export const experiences = [
   },
   {
     title: "Web Developer",
-    // company_name: "Tesla",
-    lineColor: " rgba(52, 141, 163)",
     icon: html,
     iconBg: "#E6DEDD",
 
@@ -118,9 +121,6 @@ export const experiences = [
   },
   {
     title: "Backend Developer",
-
-    // company_name: "Shopify",
-    lineColor: " rgb(52, 141, 163)",
     icon: nodejs,
     iconBg: "#383E56",
 
@@ -135,8 +135,6 @@ export const experiences = [
   },
   {
     title: "Full stack Developer",
-    // company_name: "Meta",
-    lineColor: " rgb(136, 69, 132)",
     icon: reactjs,
     iconBg: "#E6DEDD",
     points: [
@@ -188,6 +186,14 @@ export const technologies = [
     name: "figma",
     icon: figma,
   },
+  {
+    name: "threejs",
+    icon: threejs,
+  },
+  {
+    name: "redux",
+    icon: redux,
+  },
 ];
 export const works = [
   {
@@ -208,7 +214,7 @@ export const works = [
         color: "pink-text-gradient",
       },
     ],
-    image: "https://via.placeholder.com/300x200",
+    image: jobit,
     source_code_link: "",
   },
   {
@@ -221,15 +227,19 @@ export const works = [
         color: "blue-text-gradient",
       },
       {
-        name: "css",
+        name: "tailwindcss",
         color: "green-text-gradient",
       },
       {
         name: "vercel",
         color: "pink-text-gradient",
       },
+      {
+        name: "threejs",
+        color: "violet-gradient",
+      },
     ],
-    image: "https://via.placeholder.com/300x200",
+    image: jobit,
     source_code_link: "",
   },
   {
@@ -254,7 +264,7 @@ export const works = [
         color: "orange-text-gradient",
       },
     ],
-    image: "https://via.placeholder.com/300x200",
+    image: jobit,
     source_code_link: "",
   },
   {
@@ -271,11 +281,11 @@ export const works = [
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "tailwindcss",
         color: "pink-text-gradient",
       },
     ],
-    image: "https://via.placeholder.com/300x200",
+    image: jobit,
     source_code_link: "",
   },
   {
@@ -296,7 +306,7 @@ export const works = [
         color: "pink-text-gradient",
       },
     ],
-    image: "https://via.placeholder.com/300x200",
+    image: jobit,
     source_code_link: "",
   },
   {
@@ -317,7 +327,7 @@ export const works = [
         color: "pink-text-gradient",
       },
     ],
-    image: "https://via.placeholder.com/300x200",
+    image: jobit,
     source_code_link: "",
   },
 ];
@@ -395,5 +405,23 @@ export const reviews = [
       "Improved app performance and user experience through code optimization and testing.",
       "Coordinated with the product team to implement features based on feedback.",
     ],
+  },
+];
+export const social = [
+  {
+    name: "insta",
+    imgPath: insta,
+  },
+  {
+    name: "fb",
+    imgPath: fb,
+  },
+  {
+    name: "x",
+    imgPath: x,
+  },
+  {
+    name: "linkedin",
+    imgPath: linkedlin,
   },
 ];

@@ -17,7 +17,7 @@ const TimelineItem = ({ item, index }) => {
 
   return (
     <div className="timeline-card relative pl-10 group">
-      <div className="absolute left-[-1.25rem] top-4 w-10 h-10 bg-white rounded-full border-4 border-cyan-500 flex items-center justify-center overflow-hidden z-10">
+      <div className="absolute left-[-1.25rem] top-4 w-10 h-10 bg-white rounded-full border-4 border-[#00cea8] flex items-center justify-center overflow-hidden z-10">
         <img src={item.icon} alt="icon" className="w-6 h-6 object-contain" />
       </div>
 

@@ -9,36 +9,32 @@ export const NavItems = () => {
   const handleActiveLink = (id) => {
     setActiveLink(id);
   };
-const location = useLocation()
+  const location = useLocation();
   return (
     <>
       <ul className="sm:flex gap-6 items-center justify-center text-lg  ">
         {navlinks.map(({ url, id, title, icon }) => {
           // Check if the current URL matches the link's URL
           const isActive = location.pathname === url;
-          return(
-
-          <li
-            key={id}
-            className="px-10 py-4 text-gray-200 transition-colors"
-            onClick={() => handleActiveLink(id)}
-          >
-            <NavLink
-              to={url}
-              className={`${activeLink === id ? "flex items-center justify-center" : ""}`}
+          return (
+            <li
+              key={id}
+              className="px-4 py-4 text-gray-200 transition-colors"
+              onClick={() => handleActiveLink(id)}
             >
-              {isActive  ? (
-                <img src={icon} alt={title} />
-              ) : (
-                <span>{title}</span>
-              )}
-            
-            </NavLink>
-          </li>
-          )
-        }
-          
-        )}
+              <NavLink
+                to={url}
+                className={`${activeLink === id ? "flex items-center justify-center" : ""}`}
+              >
+                {isActive ? (
+                  <img src={icon} alt={title} />
+                ) : (
+                  <span>{title}</span>
+                )}
+              </NavLink>
+            </li>
+          );
+        })}
       </ul>
     </>
   );
@@ -51,25 +47,25 @@ const Navbar = () => {
   return (
     <>
       <header className="relative z-50 ">
-        <div className="mx-auto flex items-center justify-around  ">
-          <Link
-            to="/"
-            className="logo  mx-auto flex items-center justify-center"
-            onClick={()=>{window.scrollTo(0,0)}}
-          >
-            <img
-              src={logo}
-              alt="logo"
-              className="w-10 h-10  rounded-full"
-            />
-            &nbsp;
-            <span className="flex items-center justify-center font-extrabold head-text">
-              Rafia
-            </span>
-          </Link>
+        <div className="mx-auto flex  gap-10 items-center justify-around ">
+          <div className="w-50 h-15 flex justify-center items-center">
+            <Link
+              to="/"
+              className="logo  mx-auto flex items-center justify-center"
+              onClick={() => {
+                window.scrollTo(0, 0);
+              }}
+            >
+              <img src={logo} alt="logo" className="w-10 h-10 rounded-full" />
+              &nbsp;
+              <span className="flex items-center justify-center font-extrabold head-text">
+                Rafia
+              </span>
+            </Link>
+          </div>
 
           <nav>
-            <div className="sm:flex hidden space-x-6 z-100  ">
+            <div className="sm:flex hidden space-x-6 z-100 w-full">
               <NavItems />
             </div>
           </nav>
