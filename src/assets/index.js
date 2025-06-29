@@ -25,3 +25,7 @@ export const linkedlin ="../src/assets/social/linkedlin.png";
 export const insta="../src/assets/social/insta.png"
 export const threejs ="../src/assets/tech/threejs.svg"
 export const redux="../src/assets/tech/redux.png"
+export const jane="../src/assets/review/jane.jpg"
+export const alice="../src/assets/review/alice.jpg"
+export const bob="../src/assets/review/bob.jpg"
+export const john="../src/assets/review/john.jpg"

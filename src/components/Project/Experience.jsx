@@ -35,8 +35,7 @@ const Experience = () => {
         ref={ref}
         className="mt-4 text-gray-400 text-[17px] para max-w-3xl md:w-2/3 w-full leading-[30px] mb-[100px]"
       >
-        "Although I am new to the industry, I have been actively learning and
-        working on various projects to develop my skills."
+        "💼 Aspiring Developer — Gaining hands-on experience through personal projects, online courses, and continuous learning in web development and programming."
       </animated.p>
       <Timeline items={experiences} />
     </section>

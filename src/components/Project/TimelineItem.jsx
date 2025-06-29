@@ -16,24 +16,24 @@ const TimelineItem = ({ item, index }) => {
   };
 
   return (
-    <div className="timeline-card relative pl-10 group">
+    <div className="timeline-card  relative pl-7 sm:pl-10 group ">
       <div className="absolute left-[-1.25rem] top-4 w-10 h-10 bg-white rounded-full border-4 border-[#00cea8] flex items-center justify-center overflow-hidden z-10">
-        <img src={item.icon} alt="icon" className="w-6 h-6 object-contain" />
+        <img src={item.icon} alt="icon" className={`w-6 h-6 object-contain `} />
       </div>
 
       <div
         ref={(el) => (cardRefs.current[index] = el)}
         onMouseMove={handleMouseMove(index)}
-        className="card card-border rounded-xl p-8 text-secondary shadow-xl"
+        className="card card-border min-w-[75vw]  md:w-[500px] rounded-xl p-2 md:p-8 text-secondary shadow-xl"
       >
         <div className="glow"/>
 
-        <div className="space-y-3">
-          <h1 className="text-2xl font-bold text-white">{item.title}</h1>
+        <div className="space-y-3 ">
+          <h1 className="text-xl md:text-2xl font-bold text-white">{item.title}</h1>
           <p className="italic text-[#839CB5]">Responsibilities</p>
           <ul className="list-disc ms-5 mt-2 flex flex-col gap-2 text-white-50">
             {(item.points || []).map((point, idx) => (
-              <li key={`point-${idx}`} className="text-sm tracking-wide">
+              <li key={`point-${idx}`} className="md:text-base text-[13px] tracking-wide">
                 {point}
               </li>
             ))}

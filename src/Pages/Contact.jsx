@@ -19,17 +19,35 @@ const Contact = () => {
         setError(true);
       });
   }, []);
+  // Create a custom theme with dark background and Poppins font
+  const theme = createTheme({
+    palette: {
+      mode: "dark",
+      background: {
+        default: "#000000d1",
+        paper: "#000000d1",
+      },
+      text: {
+        primary: "#fff",
+      },
+    },
+    typography: {
+      fontFamily: ["Poppins", "sans-serif"].join(","),
+    },
+  });
+
   return (
     <>
-      <section className="relative flex md:flex-row flex-col mx-auto items-center justify-center  paddingY bg-[#000000d1]">
+      <div className="bg-red-300 w-full h-10 "></div>
+      <section className="relative flex md:flex-row flex-col bg-black mx-auto items-center justify-center">
         {alert.show && <Alert {...alert} />}
         <AnimationProvider>
-          <div className="flex  w-[135vw]  md:w-[50%] justify-center items-center flex-col md:min-h-full">
-            <ThemeProvider theme={createTheme({ palette: { mode: "dark" } })}>
+          <div className="flex w-[135vw] md:w-[50%] justify-center items-center flex-col md:min-h-full">
+            <ThemeProvider theme={theme}>
               <Contactform showAlert={showAlert} hideAlert={hideAlert} />
             </ThemeProvider>
           </div>
-          <div className=" lg:w-1/2 w-full  md:h-[550px] h-[450px] flex-1 min-w-[50%] flex justify-center items-center flex-col  md:min-h-full ">
+          <div className="lg:w-1/2 w-full md:h-[550px] h-[450px] flex-1 min-w-[50%] flex justify-center items-center flex-col md:min-h-full ">
             {error ? (
               <Error />
             ) : (
@@ -55,6 +73,4 @@ const Contact = () => {
     </>
   );
 };
-
-// export default SectionWrapper(Contact, "/contact");
 export default Contact;

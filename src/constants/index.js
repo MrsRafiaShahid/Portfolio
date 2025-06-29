@@ -22,6 +22,10 @@ import {
   linkedlin,
   threejs,
   redux,
+  jane,
+  john,
+  alice,
+  bob,
 } from "../assets";
 
 export const navlinks = [
@@ -58,21 +62,6 @@ export const footerLinks = [
   },
 ];
 
-export const socialMediaProfiles = [
-  {
-    id: "facebook",
-    url: "https://www.facebook.com/yourpage",
-  },
-  {
-    id: "twitter",
-    url: "https://www.twitter.com/yourpage",
-  },
-  {
-    id: "instagram",
-    url: "https://www.instagram.com/yourpage",
-  },
-];
-
 export const services = [
   {
     title: "Web Developer",
@@ -97,13 +86,11 @@ export const experiences = [
     icon: reactjs,
     iconBg: "#383E56",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
+      "Developed dynamic single-page applications (SPAs) using React.js and Next.js.",
+      "Utilized state management (Redux, Context API) and hooks for efficient data flow",
+      "Integrated APIs and optimized components for high performance.",
       "Participating in code reviews and providing constructive feedback to other developers.",
     ],
-    review:
-      "Adrian brought creativity and technical expertise to the team, significantly improving our frontend performance. His work has been invaluable in delivering faster experiences.",
   },
   {
     title: "Web Developer",
@@ -111,13 +98,11 @@ export const experiences = [
     iconBg: "#E6DEDD",
 
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
+      "Crafted responsive and interactive user interfaces using HTML, CSS, and JavaScript.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
+      "Optimized web performance and accessibility while ensuring cross-browser compatibility.",
       "Participating in code reviews and providing constructive feedback to other developers.",
     ],
-    review:
-      "Adrian brought creativity and technical expertise to the team, significantly improving our frontend performance. His work has been invaluable in delivering faster experiences.",
   },
   {
     title: "Backend Developer",
@@ -125,26 +110,20 @@ export const experiences = [
     iconBg: "#383E56",
 
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Built scalable server-side applications using Node.js, Python, and other related technolgies",
+      "Designed RESTful APIs and managed databases (SQL & NoSQL). Implemented authentication, security, and data processing for efficient backend operations.",
+      "Implemented authentication, security, and data processing for efficient backend operations.",
     ],
-    review:
-      "Adrian’s work on Appwrite’s mobile app brought a high level of quality and efficiency. He delivered solutions that enhanced our mobile experience & meet our product goals.",
   },
   {
     title: "Full stack Developer",
     icon: reactjs,
     iconBg: "#E6DEDD",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Delivered end-to-end web solutions by combining front-end and back-end expertise.",
+      "Worked with MERN/MEAN stacks to build full-fledged applications.",
+      "Streamlined deployment using cloud services and CI/CD pipelines.",
     ],
-    review:
-      "Adrian brought creativity and technical expertise to the team, significantly improving our frontend performance. His work has been invaluable in delivering faster experiences.",
   },
 ];
 
@@ -335,93 +314,56 @@ export const works = [
 export const testimonials = [
   {
     testimonial:
-      "I had the pleasure of working with this developer on a project, and I was thoroughly impressed with their skills and professionalism. They delivered high-quality work on time and were always willing to go the extra mile to ensure the project's success.",
+      "They built a robust API that scaled seamlessly with our growing user base. Their problem-solving skills in database optimization and security were outstanding",
     name: "John Doe",
-    designation: "CEO",
+    designation: "Backend Team Lead",
     company: "Tech Solutions",
-    image: "https://via.placeholder.com/100x100",
+    image: john,
   },
   {
     testimonial:
-      "This developer is a true professional. Their attention to detail and ability to solve complex problems is outstanding. I highly recommend them for any web development project.",
+      "From concept to deployment, Rafia delivered a flawless full-stack application. Their ability to bridge front-end and back-end efficiently saved us time and resources.",
     name: "Jane Smith",
-    designation: "CTO",
+    designation: "Project Manager",
     company: "Innovatech",
-    image: "https://via.placeholder.com/100x100",
+    image: jane,
   },
   {
     testimonial:
-      "Working with this developer was a great experience. They are knowledgeable, responsive, and deliver results that exceed expectations. I look forward to collaborating with them again in the future.",
+      "Working with Rafia was a game-changer for our project. Their attention to detail in UI/UX and clean code structure made our website load faster and improved user engagement significantly.",
     name: "Alice Johnson",
     designation: "Project Manager",
     company: "Creative Minds",
-    image: "https://via.placeholder.com/100x100",
+    image: alice,
   },
   {
     testimonial:
-      "This developer has a unique ability to understand client requirements and translate them into functional and visually appealing web applications. Their work ethic and dedication are commendable.",
+      "THer developer has a unique ability to understand client requirements and translate them into functional and visually appealing web applications.  Their expertise in state management reduced bugs and improved app stability.",
     name: "Bob Brown",
-    designation: "Lead Developer ",
+    designation: "Front-End Developer",
     company: "Web Innovators",
-    image: "https://via.placeholder.com/100x100",
-  },
-];
-export const reviews = [
-  {
-    review:
-      "Adrian brought creativity and technical expertise to the team, significantly improving our frontend performance. His work has been invaluable in delivering faster experiences.",
-    imgPath: "/images/exp1.png",
-    logoPath: "/images/logo1.png",
-    title: "Frontend Developer",
-    date: "January 2023 - Present",
-    responsibilities: [
-      "Developed and maintained user-facing features for the Hostinger website.",
-      "Collaborated closely with UI/UX designers to ensure seamless user experiences.",
-      "Optimized web applications for maximum speed and scalability.",
-    ],
-  },
-  {
-    review:
-      "Adrian’s contributions to Docker's web applications have been outstanding. He approaches challenges with a problem-solving mindset.",
-    imgPath: "/images/exp2.png",
-    logoPath: "/images/logo2.png",
-    title: "Full Stack Developer",
-    date: "June 2020 - December 2023",
-    responsibilities: [
-      "Led the development of Docker's web applications, focusing on scalability.",
-      "Worked with backend engineers to integrate APIs seamlessly with the frontend.",
-      "Contributed to open-source projects that were used with the Docker ecosystem.",
-    ],
-  },
-  {
-    review:
-      "Adrian’s work on Appwrite’s mobile app brought a high level of quality and efficiency. He delivered solutions that enhanced our mobile experience & meet our product goals.",
-    imgPath: "/images/exp3.png",
-    logoPath: "/images/logo3.png",
-    title: "React Native Developer",
-    date: "March 2019 - May 2020",
-    responsibilities: [
-      "Built cross-platform mobile apps using React Native, integrating with Appwrite's backend services.",
-      "Improved app performance and user experience through code optimization and testing.",
-      "Coordinated with the product team to implement features based on feedback.",
-    ],
+    image: bob,
   },
 ];
 export const social = [
   {
     name: "insta",
     imgPath: insta,
+    url: "https://www.instagram.com/",
   },
   {
     name: "fb",
     imgPath: fb,
+    url: "https://www.facebook.com/",
   },
   {
     name: "x",
     imgPath: x,
+    url: "https://www.x.com/",
   },
   {
     name: "linkedin",
     imgPath: linkedlin,
+    url: "https://www.linkedlin.com/",
   },
 ];

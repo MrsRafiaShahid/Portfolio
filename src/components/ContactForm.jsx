@@ -76,12 +76,11 @@ const ContactForm = ({ showAlert, hideAlert }) => {
   };
 
   return (
-    <AppProvider theme={theme}>
+    <AppProvider theme={theme} >
       <Box
         sx={{
           minHeight: "100vh",
           width: "100%",
-          // backgroundColor: "",
           padding: 4,
           display: "flex",
           justifyContent: "center",

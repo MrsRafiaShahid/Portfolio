@@ -44,10 +44,10 @@ const Timeline = ({ items = [] }) => {
   }, []);
 
   return (
-    <section id="experience" className="section-padding mt-10 px-5 xl:px-0">
+    <section id="experience" className=" mt-10 px-0 md:px-5 xl:px-0">
       <div className="w-full max-w-6xl mx-auto relative min-h-screen">
         {/* Vertical Line from top to bottom */}
-        <div className="timeline-line absolute left-4 top-0 h-full w-1 bg-gradient-to-b from-[#00cea8] to-[#bb61f7] origin-top scale-y-100 z-0" />
+        <div className="timeline-line absolute  left-4 top-0 h-full w-1 bg-gradient-to-b from-[#00cea8] to-[#bb61f7] origin-top scale-y-100 z-0" />
 
         {/* Cards */}
         <div className="flex flex-col gap-20 relative z-10 pt-10 pb-20">
