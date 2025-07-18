@@ -1,10 +1,20 @@
-import { Suspense, useEffect, useState } from "react";
+import { lazy, Suspense, useEffect, useState } from "react";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { Canvas } from "@react-three/fiber";
 import useAlert from "../components/hooks/useAlert.js";
-import { Alert, AnimateRobot, Contactform, Error, Loader } from "../components";
+import {
+  Alert,
+  Contactform,
+  Error,
+  Footer,
+  Loader,
+  Navbar,
+} from "../components";
 import { AnimationProvider } from "../components/context/AnimationContext.jsx";
 
+const AnimateRobot = lazy(
+  () => import("../components/canvas/AnimateRobot.jsx")
+);
 const Contact = () => {
   const { alert, showAlert, hideAlert } = useAlert();
   const [error, setError] = useState(false);
@@ -39,6 +49,7 @@ const Contact = () => {
   return (
     <>
       <div className="bg-red-300 w-full h-10 "></div>
+      <Navbar />
       <section className="relative flex md:flex-row flex-col bg-black mx-auto items-center justify-center">
         {alert.show && <Alert {...alert} />}
         <AnimationProvider>
@@ -70,6 +81,7 @@ const Contact = () => {
           </div>
         </AnimationProvider>
       </section>
+      <Footer />
     </>
   );
 };

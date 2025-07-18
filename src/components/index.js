@@ -1,9 +1,4 @@
-import {
-  ComputerCanvas,
-  StarsCanvas,
-  AnimateRobot,
-  BallCanvas,
-} from "./canvas";
+import { ComputerCanvas, StarsCanvas, BallCanvas } from "./canvas";
 import Hero from "../components/Home/Hero.jsx";
 import { TypedComponent } from "../components/Home/TypedComponent";
 import Navbar from "./Navbar";
@@ -23,7 +18,6 @@ import Project from "./Project/Project.jsx";
 export {
   ComputerCanvas,
   StarsCanvas,
-  AnimateRobot,
   Hero,
   Navbar,
   TypedComponent,
@@ -40,5 +34,5 @@ export {
   Testimonials,
   FeedbackCard,
   Experience,
-  Project
+  Project,
 };

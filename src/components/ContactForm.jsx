@@ -35,7 +35,7 @@ const ContactForm = ({ showAlert, hideAlert }) => {
           from_name: formData.name,
           to_name: "Rafia Shahid",
           from_email: formData.email,
-          to_email: "mrss.rafiashahid@gmail.com",
+          to_email: "rafash190@gmail.com",
           message: formData.message,
         },
         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY

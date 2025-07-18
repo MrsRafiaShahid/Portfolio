@@ -1,13 +1,16 @@
 /* eslint-disable react-refresh/only-export-components */
-import { Experience, Project } from "../components";
+import { Experience, Navbar, Project } from "../components";
 import { SectionWrapper } from "../hoc";
 
 const Projects = () => {
   return (
     <>
+    <Navbar/>
       <Experience />
       <Project />
+      <Footer/>
     </>
+
   );
 };
 

@@ -6,7 +6,9 @@ const Home = () => {
   return (
     <>
       <div className="w-full h-10"></div>
+      <Navbar/>
       <Hero />
+      <Footer/>
     </>
   );
 };
