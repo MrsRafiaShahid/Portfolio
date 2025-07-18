@@ -38,7 +38,7 @@ const Testimonials = () => {
             <p className="sm:text-[18px] text-[14px] text-secondary uppercase tracking-wider">What Other's say</p>
             <h2 className=" text-white font-bold md:text-[60px] sm:text-[50px] text-[30px]">Testimonials.</h2>
           </animated.div>
-          <div className="w-full grid grid-cols-1 pb-14 sm:grid-cols-2 md:grid-cols-3 gap-7 rounded-3xl">
+          <div className="w-full -mt-20 grid grid-cols-1 pb-14 sm:grid-cols-2 md:grid-cols-3 gap-7 rounded-3xl">
             {testimonials.map((testimonial, index) => (
               <FeedbackCard
                 key={testimonial.name}

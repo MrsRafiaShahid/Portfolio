@@ -17,7 +17,6 @@ import {
   mongodb,
   insta,
   fb,
-  x,
   linkedlin,
   threejs,
   redux,
@@ -31,6 +30,8 @@ import {
   pokemon,
   portfolio,
   mubrrah,
+  githubicon,
+  x,
 } from "../assets";
 
 export const navlinks = [
@@ -352,21 +353,26 @@ export const social = [
   {
     name: "insta",
     imgPath: insta,
-    url: "https://www.instagram.com/",
+    url: "https://www.instagram.com/raffi__2002/",
   },
   {
     name: "fb",
     imgPath: fb,
-    url: "https://www.facebook.com/",
+    url: "https://www.facebook.com/rafia.shahid.733",
   },
   {
-    name: "x",
-    imgPath: x,
-    url: "https://www.x.com/",
+    name: "github",
+    imgPath: githubicon,
+    url: "https://github.com/MrsRafiaShahid",
   },
   {
     name: "linkedin",
     imgPath: linkedlin,
-    url: "https://www.linkedlin.com/",
+    url: "https://www.linkedin.com/in/rafia-shahid-285b37374",
   },
+  {
+    name:"x",
+    imgPath:x,
+    url:"https://x.com/"
+  }
 ];
