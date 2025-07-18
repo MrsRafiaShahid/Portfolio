@@ -3,8 +3,6 @@
 import {
   AboutHero,
   AboutSection,
-  Footer,
-  Navbar,
   Tech,
   Testimonials,
 } from "../components/index.js";
@@ -13,13 +11,10 @@ import SectionWrapper from "../hoc/SectionWrapper.jsx";
 const About = () => {
   return (
     <>
-    <Navbar/>
       <AboutHero />
       <AboutSection />
       <Tech />
-
       <Testimonials />
-      <Footer/>
     </>
   );
 };

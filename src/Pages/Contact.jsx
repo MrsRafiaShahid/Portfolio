@@ -48,8 +48,6 @@ const Contact = () => {
 
   return (
     <>
-      <div className="bg-red-300 w-full h-10 "></div>
-      <Navbar />
       <section className="relative flex md:flex-row flex-col bg-black mx-auto items-center justify-center">
         {alert.show && <Alert {...alert} />}
         <AnimationProvider>
@@ -81,7 +79,7 @@ const Contact = () => {
           </div>
         </AnimationProvider>
       </section>
-      <Footer />
+   
     </>
   );
 };

@@ -52,8 +52,8 @@ const Hero = () => {
             </div>
           </animated.div>
         </div>
-        <div className="w-50 absolute min-h-screen top-90 left-0 md:top-0 md:left-2/3 md:w-2/6 md:h-full flex gap-10 mx-20 justify-center items-center">
-          <img src={rafia} alt="" className="w-full md:w-1/2 rounded-full flex justify-center items-center"/>
+        <div className="w-50 absolute min-h-screen top-85 left-0 md:top-0 md:left-2/3 md:w-2/6 md:h-full flex gap-10 mx-20 justify-center items-center">
+          <img src={rafia} alt="" className="w-[150px] md:w-1/2 rounded-full flex justify-center items-center"/>
         </div>
       </section>
     </>

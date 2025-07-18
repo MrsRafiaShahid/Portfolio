@@ -5,12 +5,11 @@ import { SectionWrapper } from "../hoc";
 const Home = () => {
   return (
     <>
-      <div className="w-full h-10"></div>
-      <Navbar/>
       <Hero />
-      <Footer/>
+
     </>
   );
 };
 
 export default SectionWrapper(Home, "/");
+// export default Home

@@ -4,7 +4,6 @@
 
 :root {
   --gradient: radial-gradient(circle, #e5e5e5 0%, #fff 100%);
-  /* background: #100d2c; */
 }
 @theme {
   --color-primary: #230ffdff;
@@ -42,7 +41,6 @@ body {
 }
 * {
   margin-bottom: 0;
-  /* padding: 0; */
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
@@ -53,13 +51,11 @@ body {
   margin: 0 auto;
   padding: 0 20px;
   min-height: 85vh;
-  /* border: 2px solid rgba(138, 104, 104, 0.1); */
   margin-bottom: 50px;
 }
 .about-card {
   position: relative;
   overflow: hidden;
-  /* background-color: #1a1a2e; */
 }
 
 .glow-overlay {
@@ -175,7 +171,7 @@ body {
   border-radius: 50%;
 }
 a:hover {
-  color: var(--color-tertiary);
+  color: var(--color-primary);
   transition: color 0.5s ease-in-out;
   cursor: pointer;
 }
