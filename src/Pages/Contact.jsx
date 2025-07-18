@@ -48,6 +48,7 @@ const Contact = () => {
 
   return (
     <>
+    <div className="h-10 w-full"></div>
       <section className="relative flex md:flex-row flex-col bg-black mx-auto items-center justify-center">
         {alert.show && <Alert {...alert} />}
         <AnimationProvider>
