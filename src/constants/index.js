@@ -1,38 +1,36 @@
-import {
-  web,
-  mobile,
-  backend,
-  creator,
-  about,
-  project,
-  contact,
-  reactjs,
-  css,
-  figma,
-  git,
-  html,
-  javascript,
-  tailwind,
-  nodejs,
-  mongodb,
-  insta,
-  fb,
-  linkedlin,
-  threejs,
-  redux,
-  jane,
-  john,
-  alice,
-  bob,
-  weather,
-  task,
-  xclone,
-  pokemon,
-  portfolio,
-  mubrrah,
-  githubicon,
-  x,
-} from "../assets";
+ const about = "/assets/navlogo/about.svg";
+ const project = "/assets/navlogo/project.svg";
+ const contact = "/assets/navlogo/contact.svg";
+ const web = "/assets/about/web.png";
+ const mobile = "/assets/about/mobile.png";
+ const backend = "/assets/about/backend.png";
+ const creator = "/assets/about/creator.png";
+ const reactjs ="/assets/tech/reactjs.png";
+ const css = "/assets/tech/css.png";
+ const figma = "/assets/tech/figma.png";
+ const git = "/assets/tech/git.png";
+ const html = "/assets/tech/html.png";
+ const javascript = "/assets/tech/javascript.png";
+ const mongodb = "/assets/tech/mongodb.png";
+ const nodejs = "/assets/tech/nodejs.png";
+ const tailwind = "/assets/tech/tailwind.png";
+ const x ="/assets/social/x.png";
+ const fb ="/assets/social/fb.png";
+ const linkedlin ="/assets/social/linkedlin.png";
+ const insta="/assets/social/insta.png"
+ const threejs ="/assets/tech/threejs.svg"
+ const redux="/assets/tech/redux.png"
+ const jane="/assets/review/jane.jpg"
+ const alice="/assets/review/alice.jpg"
+ const bob="/assets/review/bob.jpg"
+ const john="/assets/review/john.jpg"
+ const task="/assets/project/task.png"
+ const pokemon="/assets/project/pokemon.png"
+ const weather="/assets/project/weather.png"
+ const xclone="/assets/project/x-clone.png"
+ const portfolio="/assets/project/portfolio.png"
+ const mubrrah ="/assets/review/mubrrah.jpg"
+ const githubicon="/assets/social/github.svg"
 
 export const navlinks = [
   {

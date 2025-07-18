@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { rafia } from "../../assets";
+ const rafia ="/assets/rafia.jpeg"
 import "../../index.css";
 import { TypedComponent } from "./TypedComponent";
 import { useSpring, animated } from "@react-spring/web";

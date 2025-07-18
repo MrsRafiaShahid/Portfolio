@@ -1,9 +1,10 @@
 /* eslint-disable no-unused-vars */
-import { useSpring,animated } from "@react-spring/web";
+import { useSpring, animated } from "@react-spring/web";
 import React, { useEffect, useRef } from "react";
 import { useInView } from "react-intersection-observer";
 import { calcTilt } from "../../utils/motion";
-import { github, global } from "../../assets";
+const global = "/assets/global.png";
+const github = "/assets/tech/github.png";
 
 const ProjectCard = ({
   index,
@@ -21,11 +22,13 @@ const ProjectCard = ({
     rootMargin: "-50px 0px",
     onChange: (inView) => {
       if (inView) {
-        ref.current.style.transform = "perspective(600px) rotateX(0deg) rotateY(0deg) scale(1.05)";
+        ref.current.style.transform =
+          "perspective(600px) rotateX(0deg) rotateY(0deg) scale(1.05)";
       } else {
-        ref.current.style.transform = "perspective(600px) rotateX(0deg) rotateY(0deg) scale(1)";
+        ref.current.style.transform =
+          "perspective(600px) rotateX(0deg) rotateY(0deg) scale(1)";
       }
-    }
+    },
   });
   const [springStyles, api] = useSpring(() => ({
     opacity: 0,
@@ -40,7 +43,7 @@ const ProjectCard = ({
         opacity: 1,
         x: 0,
         // delay: index * 200,
-        immediate:true,
+        immediate: true,
       });
     } else {
       api.start({

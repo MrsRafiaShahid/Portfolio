@@ -1,9 +1,9 @@
 import { useState } from "react";
-import logo from "../assets/logo.svg";
 import { navlinks } from "../constants";
 import { Link, NavLink, useLocation } from "react-router-dom";
-import menu from "../assets/menu.svg";
-import close from "../assets/close.svg";
+const menu = "/assets/menu.svg";
+ const close = "/assets/close.svg";
+ const logo = "/assets/logo.svg";
 export const NavItems = () => {
   const [activeLink, setActiveLink] = useState("");
   const handleActiveLink = (id) => {
