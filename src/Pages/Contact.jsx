@@ -1,27 +1,23 @@
 import { lazy, Suspense, useEffect, useState } from "react";
-import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { Canvas } from "@react-three/fiber";
 import useAlert from "../components/hooks/useAlert.js";
 import {
   Alert,
   Contactform,
   Error,
-  Footer,
   Loader,
-  Navbar,
 } from "../components";
 import { AnimationProvider } from "../components/context/AnimationContext.jsx";
 
-const AnimateRobot = lazy(
-  () => import("../components/canvas/AnimateRobot.jsx")
-);
+const AnimateRobot = lazy(() => import("../components/canvas/AnimateRobot.jsx"));
+
 const Contact = () => {
   const { alert, showAlert, hideAlert } = useAlert();
   const [error, setError] = useState(false);
+
   useEffect(() => {
     import("../components/canvas/AnimateRobot.jsx")
       .then(() => {
-        // Successfully loaded the component
         console.log("3D model loaded successfully.");
       })
       .catch((err) => {
@@ -29,35 +25,21 @@ const Contact = () => {
         setError(true);
       });
   }, []);
-  // Create a custom theme with dark background and Poppins font
-  const theme = createTheme({
-    palette: {
-      mode: "dark",
-      background: {
-        default: "#000000d1",
-        paper: "#000000d1",
-      },
-      text: {
-        primary: "#fff",
-      },
-    },
-    typography: {
-      fontFamily: ["Poppins", "sans-serif"].join(","),
-    },
-  });
 
   return (
     <>
-    <div className="h-10 w-full"></div>
+      <div className="h-10 w-full" />
+
       <section className="relative flex md:flex-row flex-col bg-black mx-auto items-center justify-center">
         {alert.show && <Alert {...alert} />}
+        
         <AnimationProvider>
           <div className="flex w-[135vw] md:w-[50%] justify-center items-center flex-col md:min-h-full">
-            <ThemeProvider theme={theme}>
-              <Contactform showAlert={showAlert} hideAlert={hideAlert} />
-            </ThemeProvider>
+            {/* Removed ThemeProvider and used Contactform directly */}
+            <Contactform showAlert={showAlert} hideAlert={hideAlert} />
           </div>
-          <div className="lg:w-1/2 w-full md:h-[550px] h-[450px] flex-1 min-w-[50%] flex justify-center items-center flex-col md:min-h-full ">
+
+          <div className="lg:w-1/2 w-full md:h-[550px] h-[450px] flex-1 min-w-[50%] flex justify-center items-center flex-col md:min-h-full">
             {error ? (
               <Error />
             ) : (
@@ -80,8 +62,8 @@ const Contact = () => {
           </div>
         </AnimationProvider>
       </section>
-   
     </>
   );
 };
+
 export default Contact;

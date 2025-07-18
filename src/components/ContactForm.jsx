@@ -1,13 +1,99 @@
-import { AppProvider } from "@toolpad/core/AppProvider";
-import { Box, TextField, Button, Typography } from "@mui/material";
 import { useState, useRef } from "react";
-import { useTheme } from "@mui/material/styles";
 import emailjs from "@emailjs/browser";
 import { useAnimation } from "./context/AnimationContext";
 
 const ContactForm = ({ showAlert, hideAlert }) => {
   const formRef = useRef(null);
-  const theme = useTheme();
+  const { setCurrentAnimation } = useAnimation();
+const styles = {
+  container: {
+    minHeight: "100vh",
+    width: "100%",
+    padding: "2rem",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#000",
+  },
+  card: {
+    width: "70%",
+    padding: "0.25rem",
+    backgroundColor: "#000",
+    color: "#fff",
+    borderRadius: "16px",
+    boxShadow: "0 4px 12px rgba(0,0,0,0.4)",
+  },
+  form: {
+    maxWidth: "600px",
+    margin: "auto",
+    padding: "2rem",
+    display: "flex",
+    flexDirection: "column",
+    gap: "1.5rem",
+    backgroundColor: "#000",
+    color: "#fff",
+    borderRadius: "12px",
+  },
+  heading: {
+    fontSize:"24px",
+    textAlign: "center",
+    color: "#fff",
+  },
+  subtext: {
+    textAlign: "center",
+    color: "#aaa",
+    fontSize: "14px",
+  },
+  button: {
+    padding: "12px",
+    borderRadius: "6px",
+    border: "none",
+    backgroundColor: "#1976d2",
+    color: "#fff",
+    fontWeight: "bold",
+    cursor: "pointer",
+    transition: "background-color 0.3s",
+  },
+};
+
+const floatingLabelStyles = `
+  .form-field {
+    position: relative;
+  }
+
+  .form-field input,
+  .form-field textarea {
+    width: 100%;
+    padding: 12px;
+    padding-top: 20px;
+    border: 1px solid #444;
+    border-radius: 6px;
+    background-color: #111;
+    color: #fff;
+    font-size: 16px;
+    outline: none;
+  }
+
+  .form-field label {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    padding: 0 4px;
+    color: #aaa;
+    font-size: 16px;
+    pointer-events: none;
+    transition: 0.2s ease all;
+  }
+
+  .form-field input:focus + label,
+  .form-field textarea:focus + label,
+  .form-field .active {
+    top: -10px;
+    left: 8px;
+    font-size: 12px;
+    color: #1976d2;
+  }
+`;
 
   const [formData, setFormData] = useState({
     name: "",
@@ -15,17 +101,18 @@ const ContactForm = ({ showAlert, hideAlert }) => {
     message: "",
   });
   const [loading, setLoading] = useState(false);
-  
-  const { setCurrentAnimation } = useAnimation();
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  const handleFocus = () => setCurrentAnimation("ArmatureAction");
+  const handleBlur = () => setCurrentAnimation("Idle");
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
-    setCurrentAnimation("ArmatureAction"); // Increase animation speed (example: 2x)
+    setCurrentAnimation("ArmatureAction");
 
     emailjs
       .send(
@@ -42,19 +129,15 @@ const ContactForm = ({ showAlert, hideAlert }) => {
       )
       .then(() => {
         setLoading(false);
-        showAlert({
-          show: true,
-          message: "Message sent successfully!",
-          type: "success",
-        });
+        showAlert({ show: true, message: "Message sent successfully!", type: "success" });
         setTimeout(() => {
-          hideAlert(); // Hide alert after 3 seconds
-          setCurrentAnimation("Idle"); // Reset animation to Idle after sending
-          setFormData({ name: "", email: "", message: "" }); // Reset form data
-        }, [3000]); // Wait for 3 seconds before resetting animation
+          hideAlert();
+          setCurrentAnimation("Idle");
+          setFormData({ name: "", email: "", message: "" });
+        }, 3000);
       })
       .catch((error) => {
-        setLoading(false); // Reset loading state
+        setLoading(false);
         setCurrentAnimation("Idle");
         console.error("Error sending message:", error);
         showAlert({
@@ -64,134 +147,74 @@ const ContactForm = ({ showAlert, hideAlert }) => {
         });
       });
   };
-  const handleFocus = (e) => {
-    e.target.style.backgroundColor = "#222"; // Darker background on focus
-    e.target.style.borderColor = "#1976d2"; // Change border color on focus
-    setCurrentAnimation("ArmatureAction"); // Set animation to ArmatureAction on focus
-  };
-  const handleBlur = (e) => {
-    e.target.style.backgroundColor = "#111"; // Reset background on blur
-    e.target.style.borderColor = "#aaa"; // Reset border color on blur
-    setCurrentAnimation("Idle");
-  };
 
   return (
-    <AppProvider theme={theme} >
-      <Box
-        sx={{
-          minHeight: "100vh",
-          width: "100%",
-          padding: 4,
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <Box
-          sx={{
-            width: "70%",
-            padding: 0.25,
-            bgcolor: "#000", // Black background
-            color: "#fff",
-            borderRadius: 2,
-            boxShadow: 3,
-          }}
-          className="green-pink-gradient"
-        >
-          <Box
-            component="form"
-            onSubmit={handleSubmit}
-            ref={formRef}
-            sx={{
-              maxWidth: 600,
-              margin: "auto",
-              padding: 4,
-              display: "flex",
-              flexDirection: "column",
-              gap: 3,
-              bgcolor: "#000", // Black background
-              color: "#fff",
-              borderRadius: 2,
-            }}
-          >
-            <Typography variant="h4" align="center" color="#fff">
-              Contact Me
-            </Typography>
-            <Typography variant="body2" align="center" color="#aaa">
-              I am always open to discussing new projects, creative ideas, or
-              opportunities to be part of your vision.
-            </Typography>
+    <div style={styles.container}>
+      <style>{floatingLabelStyles}</style>
+      <div style={styles.card} className="green-pink-gradient">
+        <form ref={formRef} onSubmit={handleSubmit} style={styles.form}>
+          <h2 style={styles.heading}>Contact Me</h2>
+          <p style={styles.subtext}>
+            I am always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+          </p>
 
-            <TextField
+          {/* Name Field */}
+          <div className="form-field">
+            <input
+              type="text"
               name="name"
-              label="Name"
-              variant="outlined"
               value={formData.name}
-              required
               onChange={handleChange}
               onFocus={handleFocus}
               onBlur={handleBlur}
-              InputLabelProps={{ style: { color: "#aaa" } }}
-              InputProps={{
-                style: { color: "#fff", backgroundColor: "#111" },
-              }}
-              fullWidth
-            />
-
-            <TextField
-              name="email"
-              label="Email"
-              type="email"
+              autoComplete="off"
               required
-              variant="outlined"
+            />
+            <label className={formData.name ? "active" : ""}>Name</label>
+          </div>
+
+          {/* Email Field */}
+          <div className="form-field">
+            <input
+              type="email"
+              name="email"
               value={formData.email}
               onChange={handleChange}
               onFocus={handleFocus}
               onBlur={handleBlur}
-              InputLabelProps={{ style: { color: "#aaa" } }}
-              InputProps={{
-                style: { color: "#fff", backgroundColor: "#111" },
-              }}
-              fullWidth
-            />
-
-            <TextField
-              name="message"
-              label="Message"
+              autoComplete="off"
               required
-              variant="outlined"
-              multiline
-              minRows={4}
+            />
+            <label className={formData.email ? "active" : ""}>Email</label>
+          </div>
+
+          {/* Message Field */}
+          <div className="form-field">
+            <textarea
+              name="message"
+              rows="4"
               value={formData.message}
               onChange={handleChange}
               onFocus={handleFocus}
               onBlur={handleBlur}
-              InputLabelProps={{ style: { color: "#aaa" } }}
-              InputProps={{
-                style: { color: "#fff", backgroundColor: "#111" },
-              }}
-              fullWidth
+              required
             />
+            <label className={formData.message ? "active" : ""}>Message</label>
+          </div>
 
-            <Button
-              type="submit"
-              color="primary"
-              onFocus={handleFocus}
-              onBlur={handleBlur}
-              disabled={loading}
-              sx={{
-                backgroundColor: "#1976d2", // Primary color
-                "&:hover": {
-                  backgroundColor: "#115293", // Darker shade on hover
-                },
-              }}
-            >
-              {loading ? "Sending..." : "Send Message"}
-            </Button>
-          </Box>
-        </Box>
-      </Box>
-    </AppProvider>
+          {/* Submit Button */}
+          <button
+            type="submit"
+            disabled={loading}
+            onFocus={handleFocus}
+            onBlur={handleBlur}
+            style={styles.button}
+          >
+            {loading ? "Sending..." : "Send Message"}
+          </button>
+        </form>
+      </div>
+    </div>
   );
 };
 
