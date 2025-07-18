@@ -17,6 +17,14 @@ const ProjectCard = ({
   const { ref: viewRef, inView } = useInView({
     triggerOnce: false,
     threshold: 0.3,
+    rootMargin: "-50px 0px",
+    onChange: (inView) => {
+      if (inView) {
+        ref.current.style.transform = "perspective(600px) rotateX(0deg) rotateY(0deg) scale(1.05)";
+      } else {
+        ref.current.style.transform = "perspective(600px) rotateX(0deg) rotateY(0deg) scale(1)";
+      }
+    }
   });
   const [springStyles, api] = useSpring(() => ({
     opacity: 0,

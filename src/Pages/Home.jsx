@@ -5,7 +5,7 @@ import { SectionWrapper } from "../hoc";
 const Home = () => {
   return (
     <>
-      <div className="w-full h-10"></div>
+      <div className="w-full h-10 bg-red-400"></div>
       <Hero />
     </>
   );

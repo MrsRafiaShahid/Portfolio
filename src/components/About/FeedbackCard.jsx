@@ -38,7 +38,7 @@ const FeedbackCard = ({
       <animated.div
         ref={ref}
         style={styles}
-        className="bg-tertiary/20 text-white mt-20 rounded-3xl md:w-[320px] w-full"
+        className="bg-tertiary/20 text-white mt-20 rounded-3xl md:w-[320px] w-[300px]"
       >
         <p className="text-[48px] px-4 bg-black/20  rounded-t-3xl text-white ">"</p>
         <div className="mt-1">

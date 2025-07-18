@@ -15,7 +15,6 @@ import {
   tailwind,
   nodejs,
   mongodb,
-  jobit,
   insta,
   fb,
   x,
@@ -26,6 +25,12 @@ import {
   john,
   alice,
   bob,
+  weather,
+  task,
+  xclone,
+  pokemon,
+  portfolio,
+  mubrrah,
 } from "../assets";
 
 export const navlinks = [
@@ -175,10 +180,10 @@ export const technologies = [
   },
 ];
 export const works = [
-  {
-    title: "E-commerce Website",
+   {
+    title: "X Clone",
     description:
-      "Developed a full-stack e-commerce website using React, Node.js, and MongoDB. Implemented features like product listing, shopping cart, and user authentication.",
+      "Developed a social media application similar to X (formerly Twitter) that allows users to post updates, follow others, and interact with posts. Implemented features like real-time updates, user authentication, and a responsive design. ",
     tags: [
       {
         name: "react",
@@ -192,14 +197,27 @@ export const works = [
         name: "mongodb",
         color: "pink-text-gradient",
       },
+      {
+        name: "redux",
+        color: "violet-gradient",
+      },
+      {
+        name: "express",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "tailwindcss",
+        color: "yellow-text-gradient",
+      },
     ],
-    image: jobit,
-    source_code_link: "",
+    image: xclone,
+    source_code_link: "https://github.com/MrsRafiaShahid/socialapp",
+    visit_link: "https://socialapp-3uig.onrender.com",
   },
   {
     title: "Portfolio Website",
     description:
-      "Created a personal portfolio website to showcase my projects and skills. Used React for the frontend and deployed it on Vercel.",
+      "Created a personal portfolio website to showcase my skills, projects, and experiences. The website features a modern design with smooth animations, responsive layout. Built using React and styled with Tailwind CSS.",
     tags: [
       {
         name: "react",
@@ -218,38 +236,15 @@ export const works = [
         color: "violet-gradient",
       },
     ],
-    image: jobit,
-    source_code_link: "",
+    image: portfolio,
+    source_code_link: "https://github.com/MrsRafiaShahid/Portfolio",
+
   },
-  {
-    title: "Blog Platform",
-    description:
-      "Built a blog platform where users can create, edit, and delete posts. Implemented user authentication and a rich text editor for post creation.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "nodejs",
-        color: "green-text-gradient",
-      },
-      {
-        name: "express",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "mongodb",
-        color: "orange-text-gradient",
-      },
-    ],
-    image: jobit,
-    source_code_link: "",
-  },
+ 
   {
     title: "Weather App",
     description:
-      "Developed a weather application that fetches real-time weather data using an external API. Implemented features like location search and temperature conversion.",
+      "Developed a weather application that provides real-time weather updates and forecasts for any location. The app fetches data from a weather API and displays it in a user-friendly interface, including temperature, humidity, and weather conditions. Styled with Tailwind CSS for a modern look.",
     tags: [
       {
         name: "react",
@@ -264,84 +259,92 @@ export const works = [
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
-    source_code_link: "",
+    image: weather,
+    source_code_link: "https://github.com/MrsRafiaShahid/weather",
+    visit_link:"https://weather-plum-rho.vercel.app/"
   },
   {
     title: "Task Management App",
     description:
-      "Created a task management application that allows users to create, update, and delete tasks. Implemented drag-and-drop functionality for task organization.",
+      "created a task management application that allows users to create, update, and delete tasks and mark tasks as complete to stay organized and productive. The app features a clean UI styled with Tailwind CSS and offers a responsive experience across devices.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
+  
       {
-        name: "redux",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
+        name: "tailwindcss",
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
-    source_code_link: "",
+    image: task,
+    source_code_link: "https://github.com/MrsRafiaShahid/Task-App",
+    visit_link: "https://task-app-ruby-tau.vercel.app/"
   },
-  {
-    title: "Chat Application",
+ 
+   {
+    title: "Pokemon App",
     description:
-      "Developed a real-time chat application using WebSocket for instant messaging. Implemented user authentication and chat rooms.",
+      "Developed a Pokemon application that allows users to search for and view details about various Pokemon. The app fetches data from the PokeAPI and displays it in a user-friendly interface, including images, types, and abilities. The app is styled with Tailwind CSS for a modern look and feel.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "nodejs",
+        name: "api",
         color: "green-text-gradient",
       },
       {
-        name: "websocket",
+        name: "tailwindcss",
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
-    source_code_link: "",
+    image: pokemon,
+    source_code_link: "https://github.com/MrsRafiaShahid/Pokemon",
+    visit_link: "https://pokemon-ruddy-chi.vercel.app/"
   },
 ];
 
 export const testimonials = [
   {
     testimonial:
-      "They built a robust API that scaled seamlessly with our growing user base. Their problem-solving skills in database optimization and security were outstanding",
-    name: "John Doe",
-    designation: "Backend Team Lead",
-    company: "Tech Solutions",
+      "Working with Rafia was seamless. She contributed high-quality code and communicated clearly throughout.",
+    name: "Ali Khan",
+    designation: "Collaborator on Open Source",
+    company: "Riphah international University",
     image: john,
   },
   {
     testimonial:
-      "From concept to deployment, Rafia delivered a flawless full-stack application. Their ability to bridge front-end and back-end efficiently saved us time and resources.",
-    name: "Jane Smith",
-    designation: "Project Manager",
-    company: "Innovatech",
+      "Rafia has consistently demonstrated a strong grasp of core computer science principles and a dedication to continuous improvement. Her disciplined work ethic, attention to detail, and ability to apply theoretical knowledge to practical projects reflect a promising future in the tech industry. She is a dependable and capable individual, and I fully support her professional endeavors.",
+    name: "Laiba Nadeem",
+    designation: "Professor of Computer Science",
+    company: "Bano Qabil",
     image: jane,
   },
   {
+    testimonial:"Working with Rafia on multiple academic and coding projects has been a consistently positive experience. She brings clarity to complex problems and always contributes thoughtfully to team discussions. Her strong sense of responsibility and calm approach to challenges make her a reliable collaborator and a valuable asset in any technical team.",
+    name:"Mubrrah Shabbir",
+    designation:"ADP Computer Science Classmate",
+    company:"Riphah International University",
+    image:mubrrah
+  },
+  {
     testimonial:
-      "Working with Rafia was a game-changer for our project. Their attention to detail in UI/UX and clean code structure made our website load faster and improved user engagement significantly.",
-    name: "Alice Johnson",
-    designation: "Project Manager",
-    company: "Creative Minds",
+      "Working with Rafia on projects has been a great experience. She`s always organized, brings creative ideas to the table, and helps push the whole team to do better. Super reliable and a great team player!",
+    name: "Maryam Chughtai",
+    designation: "Classmate & Project Collaborator",
+    company: "Riphah International University",
     image: alice,
   },
   {
     testimonial:
-      "THer developer has a unique ability to understand client requirements and translate them into functional and visually appealing web applications.  Their expertise in state management reduced bugs and improved app stability.",
+      "Rafia was quick to grasp new concepts and showed a real passion for clean code and design. A joy to mentor.",
     name: "Bob Brown",
-    designation: "Front-End Developer",
-    company: "Web Innovators",
+    designation: "Web MERN Stack Mentor",
+    company: "Bano Qabil",
     image: bob,
   },
 ];

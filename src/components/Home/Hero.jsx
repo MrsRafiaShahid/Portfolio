@@ -1,8 +1,7 @@
 /* eslint-disable no-unused-vars */
+import { rafia } from "../../assets";
 import "../../index.css";
 import { TypedComponent } from "./TypedComponent";
-import rafia from "../../assets/rafia.png";
-import { useRef } from "react";
 import { useSpring, animated } from "@react-spring/web";
 import { useInView } from "react-intersection-observer";
 const Hero = () => {
@@ -20,7 +19,7 @@ const Hero = () => {
   return (
     <>
       <section className="min-h-screen min-w-full flex flex-col md:flex-row items-center justify-center">
-        <div className=" w-full absolute top-20 left-0 md:left-1/10 md:top-5 md:w-1/2 md:h-full  md:px-10 flex flex-col gap-10 justify-center items-center rounded-3xl ">
+        <div className=" w-full absolute top-45 left-0 md:left-1/10 md:top-5 md:w-1/2 md:h-full  md:px-10 flex flex-col gap-10 justify-center items-center rounded-3xl ">
           <animated.div
             className="left rounded-3xl px-4 py-4"
             ref={Ref}
@@ -53,8 +52,8 @@ const Hero = () => {
             </div>
           </animated.div>
         </div>
-        <div className="w-50  absolute min-h-screen top-52 left-0 md:top-0 md:left-2/3 md:w-2/6 md:h-full flex flex-col gap-10  justify-center items-center">
-          <img src={rafia} alt="" width="650px" />
+        <div className="w-50 absolute min-h-screen top-90 left-0 md:top-0 md:left-2/3 md:w-2/6 md:h-full flex gap-10 mx-20 justify-center items-center">
+          <img src={rafia} alt="" className="w-full md:w-1/2 rounded-full flex justify-center items-center"/>
         </div>
       </section>
     </>
@@ -67,10 +66,7 @@ export const Button = () => {
   return (
     <>
       <button
-        className="w-30 bg-tertiary/80 border-none rounded-2xl h-10 hover:bg-tertiary/100 hover:border-primray hover:border-2
-    "
-        // herf=""
-        // download
+        className="w-30 bg-tertiary/80 border-none rounded-2xl text-secondary h-10 hover:bg-tertiary/100 hover:border-primray hover:border-2 transition-all duration-300 ease-in-out px-4 font-semibold text-lg "
       >
         Resume
       </button>
