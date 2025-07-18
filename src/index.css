@@ -4,9 +4,10 @@
 
 :root {
   --gradient: radial-gradient(circle, #e5e5e5 0%, #fff 100%);
+  /* background: #100d2c; */
 }
 @theme {
-  --color-primary: #200347;
+  --color-primary: #230ffdff;
   --color-secondary: #aaa6c3;
   --color-tertiary: #151030;
   --color-blue-100: #100d25;

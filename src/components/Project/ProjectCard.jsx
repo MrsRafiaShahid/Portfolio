@@ -3,7 +3,7 @@ import { useSpring,animated } from "@react-spring/web";
 import React, { useEffect, useRef } from "react";
 import { useInView } from "react-intersection-observer";
 import { calcTilt } from "../../utils/motion";
-import { github } from "../../assets";
+import { github, global } from "../../assets";
 
 const ProjectCard = ({
   index,
@@ -12,6 +12,7 @@ const ProjectCard = ({
   image,
   source_code_link,
   tags,
+  visit_link,
 }) => {
   const ref = useRef(null);
   const { ref: viewRef, inView } = useInView({
@@ -80,7 +81,7 @@ const ProjectCard = ({
                 alt={title}
                 className="w-full h-full object-cover rounded-2xl"
               />
-              <div className="absolute inset-0 flex justify-end m-3 ">
+              <div className="absolute inset-0 flex justify-end m-3 gap-2">
                 <div
                   onClick={() => window.open(source_code_link, "_blank")}
                   className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
@@ -88,6 +89,16 @@ const ProjectCard = ({
                   <img
                     src={github}
                     alt="github"
+                    className="w-1/2 h-1/2 object-contain"
+                  />
+                </div>
+                <div
+                  onClick={() => window.open(visit_link, "_blank")}
+                  className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+                >
+                  <img
+                    src={global}
+                    alt="globalweb"
                     className="w-1/2 h-1/2 object-contain"
                   />
                 </div>
