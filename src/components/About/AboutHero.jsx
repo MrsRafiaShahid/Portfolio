@@ -1,10 +1,9 @@
 /* eslint-disable no-unused-vars */
 import React, { lazy, useEffect, useRef, useState } from "react";
-import { animated} from "@react-spring/web";
-import { ComputerCanvas } from "../canvas";
+import { animated, useSpring } from "@react-spring/web";
 import { useInView } from "react-intersection-observer";
 import { useFadeIn, useFadeUp } from "../../utils/motion.js";
-
+import { ComputerCanvas } from "../canvas/Computer.jsx";
 const AboutHero = () => {
   const { ref: Ref, inView } = useInView({
     triggerOnce: false,
