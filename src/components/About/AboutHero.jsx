@@ -1,16 +1,10 @@
 /* eslint-disable no-unused-vars */
 import React, { lazy, useEffect, useRef, useState } from "react";
-import { animated, useSpring } from "@react-spring/web";
-import { ComputerCanvas } from "../canvas";
+import { animated} from "@react-spring/web";
 import { useInView } from "react-intersection-observer";
 import { useFadeIn, useFadeUp } from "../../utils/motion.js";
-const AnimateRobot = lazy(() => import("../canvas/Computer.jsx"));
+const ComputerCanvas = lazy(() => import("../canvas/Computer.jsx"));
 
-const items = [
-  "About Me",
-  "I specialize in building scalable, secure web solutions with a strong grasp of RESTful APIs, database design, and cloud integration. Passionate about clean, maintainable code and solving complex problems, I thrive in team settings and stay current with web development trends.",
-  "Let's build something meaningful together.",
-];
 const AboutHero = () => {
   const { ref: Ref, inView } = useInView({
     triggerOnce: false,
