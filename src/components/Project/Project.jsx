@@ -4,19 +4,12 @@ import React from "react";
 import { useInView } from "react-intersection-observer";
 import { works } from "../../constants";
 import ProjectCard from "./ProjectCard";
+import { useFadeUp } from "../../utils/motion";
 
 const Project = () => {
   const [ref, inView] = useInView({ triggerOnce: false, threshold: 0.3 });
-  const titleSpring = useSpring({
-    opacity: inView ? 1 : 0,
-    transform: inView ? "translateY(0px)" : "translateY(20px)",
-    config: { tension: 170, friction: 26 },
-  });
-  const paraSpring = useSpring({
-    opacity: inView ? 1 : 0,
-    transform: inView ? "translateY(0px)" : "translateY(20px)",
-    config: { tension: 170, friction: 26 },
-  });
+  const titleSpring = useFadeUp(inView)
+  const paraSpring = useFadeUp(inView,200)
   return (
     <>
       <section className="">

@@ -1,22 +1,14 @@
 
 /* eslint-disable no-unused-vars */
 import { useSpring, animated } from "@react-spring/web";
-import React from "react";
 import { useInView } from "react-intersection-observer";
 import { services } from "../../constants/index.js";
 import ServiceCard from "./ServiceCard.jsx";
+import { useFadeUp } from "../../utils/motion.js";
 const AboutSection = () => {
   const [ref, inView] = useInView({ triggerOnce: false, threshold: 0.3 });
-  const titleSpring = useSpring({
-    opacity: inView ? 1 : 0,
-    transform: inView ? "translateY(0px)" : "translateY(20px)",
-    config: { tension: 170, friction: 26 },
-  });
-  const paraSpring = useSpring({
-    opacity: inView ? 1 : 0,
-    transform: inView ? "translateY(0px)" : "translateY(20px)",
-    config: { tension: 170, friction: 26 },
-  });
+  const titleSpring = useFadeUp(inView)
+  const paraSpring = useFadeUp(inView,200)
   return (
     <>
       <div

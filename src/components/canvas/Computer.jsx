@@ -3,9 +3,9 @@ import React, { Suspense, useEffect, useState } from "react";
 
 import { Canvas } from "@react-three/fiber";
 import CanvasLoader from "../Loader";
-
-const Computer = ({device}) => {
-  const computer = useGLTF("/desktop_pc/scene.gltf");
+const scene = "/3d/programmer_desktop_3d_pc.glb";
+const Computer = ({ device }) => {
+  const computer = useGLTF(scene);
 
   return (
     <>
@@ -36,35 +36,45 @@ const Computer = ({device}) => {
 export default Computer;
 
 const ComputerCanvas = () => {
-    const [device,setDevice] =useState(false)
-    useEffect(()=>{
-  
-      const mediaQuery = window.matchMedia('(max-width: 800px)')
-      setDevice(mediaQuery.matches)
-  
-      const MediaQueryChange = (e)=>{
-          setDevice(e.matches)
-      }
-      mediaQuery.addEventListener('change',MediaQueryChange) 
-      return()=>{
-          mediaQuery.removeEventListener('change',MediaQueryChange)
-      }
-    }, [])
+  const [device, setDevice] = useState(false);
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 800px)");
+    setDevice(mediaQuery.matches);
+
+    const MediaQueryChange = (e) => {
+      setDevice(e.matches);
+    };
+    mediaQuery.addEventListener("change", MediaQueryChange);
+    return () => {
+      mediaQuery.removeEventListener("change", MediaQueryChange);
+    };
+  }, []);
   return (
     <Canvas
       frameloop="demand"
       shadows
-      camera={{ position: [20, 5, 10], fov: 25 }}
+      camera={{ position: [20, 0, 10], fov: 25 }}
       gl={{ preserveDrawingBuffer: true }}
     >
       <Suspense fallback={<CanvasLoader />}>
         <ambientLight intensity={0.5} />
+        <hemisphereLight intensity={0.15} groundColor="black" />
+        <pointLight intensity={1} />
+        <spotLight
+          position={[-20, 50, 10]}
+          angle={0.12}
+          penumbra={1}
+          intensity={1}
+          castShadow
+          shadow-mapSize={1024}
+          color="blue"
+        />
         <OrbitControls
           enableZoom={false}
           maxPolarAngle={Math.PI / 2.2}
           minPolarAngle={Math.PI / 2.2}
         />
-        <Computer  device ={device}/>
+        <Computer device={device} />
       </Suspense>
       <Preload all />
     </Canvas>

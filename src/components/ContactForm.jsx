@@ -5,101 +5,13 @@ import { useAnimation } from "./context/AnimationContext";
 const ContactForm = ({ showAlert, hideAlert }) => {
   const formRef = useRef(null);
   const { setCurrentAnimation } = useAnimation();
-const styles = {
-  container: {
-    minHeight: "100vh",
-    width: "100%",
-    padding: "2rem",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "#000",
-  },
-  card: {
-    width: "70%",
-    padding: "0.25rem",
-    backgroundColor: "#000",
-    color: "#fff",
-    borderRadius: "16px",
-    boxShadow: "0 4px 12px rgba(0,0,0,0.4)",
-  },
-  form: {
-    maxWidth: "600px",
-    margin: "auto",
-    padding: "2rem",
-    display: "flex",
-    flexDirection: "column",
-    gap: "1.5rem",
-    backgroundColor: "#000",
-    color: "#fff",
-    borderRadius: "12px",
-  },
-  heading: {
-    fontSize:"24px",
-    textAlign: "center",
-    color: "#fff",
-  },
-  subtext: {
-    textAlign: "center",
-    color: "#aaa",
-    fontSize: "14px",
-  },
-  button: {
-    padding: "12px",
-    borderRadius: "6px",
-    border: "none",
-    backgroundColor: "#1976d2",
-    color: "#fff",
-    fontWeight: "bold",
-    cursor: "pointer",
-    transition: "background-color 0.3s",
-  },
-};
-
-const floatingLabelStyles = `
-  .form-field {
-    position: relative;
-  }
-
-  .form-field input,
-  .form-field textarea {
-    width: 100%;
-    padding: 12px;
-    padding-top: 20px;
-    border: 1px solid #444;
-    border-radius: 6px;
-    background-color: #111;
-    color: #fff;
-    font-size: 16px;
-    outline: none;
-  }
-
-  .form-field label {
-    position: absolute;
-    top: 12px;
-    left: 12px;
-    padding: 0 4px;
-    color: #aaa;
-    font-size: 16px;
-    pointer-events: none;
-    transition: 0.2s ease all;
-  }
-
-  .form-field input:focus + label,
-  .form-field textarea:focus + label,
-  .form-field .active {
-    top: -10px;
-    left: 8px;
-    font-size: 12px;
-    color: #1976d2;
-  }
-`;
 
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   });
+
   const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
@@ -148,17 +60,59 @@ const floatingLabelStyles = `
       });
   };
 
+  const floatingLabelStyles = `
+    .form-field {
+      position: relative;
+    }
+
+    .form-field input,
+    .form-field textarea {
+      width: 100%;
+      padding: 12px;
+      padding-top: 20px;
+      border: 1px solid #444;
+      border-radius: 6px;
+      background-color: #111;
+      color: #fff;
+      font-size: 16px;
+      outline: none;
+    }
+
+    .form-field label {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      padding: 0 4px;
+      color: #aaa;
+      font-size: 16px;
+      pointer-events: none;
+      transition: 0.2s ease all;
+    }
+
+    .form-field input:focus + label,
+    .form-field textarea:focus + label,
+    .form-field .active {
+      top: -10px;
+      left: 8px;
+      font-size: 12px;
+      color: #1976d2;
+    }
+  `;
+
   return (
-    <div style={styles.container}>
+    <div className="min-h-screen w-full flex items-center justify-center p-4 sm:p-8 bg-black">
       <style>{floatingLabelStyles}</style>
-      <div style={styles.card} className="green-pink-gradient">
-        <form ref={formRef} onSubmit={handleSubmit} style={styles.form}>
-          <h2 style={styles.heading}>Contact Me</h2>
-          <p style={styles.subtext}>
+      <div className="w-full max-w-lg p-[2px] rounded-2xl shadow-md green-pink-gradient">
+        <form
+          ref={formRef}
+          onSubmit={handleSubmit}
+          className="w-full bg-black rounded-xl p-6 sm:p-10 flex flex-col gap-5"
+        >
+          <h2 className="text-white text-2xl sm:text-3xl font-bold text-center">Contact Me</h2>
+          <p className="text-gray-400 text-sm text-center">
             I am always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
           </p>
 
-          {/* Name Field */}
           <div className="form-field">
             <input
               type="text"
@@ -208,7 +162,7 @@ const floatingLabelStyles = `
             disabled={loading}
             onFocus={handleFocus}
             onBlur={handleBlur}
-            style={styles.button}
+            className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-md transition duration-300"
           >
             {loading ? "Sending..." : "Send Message"}
           </button>

@@ -1,21 +1,36 @@
 /* eslint-disable no-unused-vars */
-import React, { useRef, useState } from "react";
-import { animated, useSpring, useTransition } from "@react-spring/web";
+import React, { lazy, useEffect, useRef, useState } from "react";
+import { animated, useSpring } from "@react-spring/web";
 import { ComputerCanvas } from "../canvas";
 import { useInView } from "react-intersection-observer";
+import { useFadeIn, useFadeUp } from "../../utils/motion.js";
+const AnimateRobot = lazy(() => import("../canvas/Computer.jsx"));
 
+const items = [
+  "About Me",
+  "I specialize in building scalable, secure web solutions with a strong grasp of RESTful APIs, database design, and cloud integration. Passionate about clean, maintainable code and solving complex problems, I thrive in team settings and stay current with web development trends.",
+  "Let's build something meaningful together.",
+];
 const AboutHero = () => {
   const { ref: Ref, inView } = useInView({
     triggerOnce: false,
     threshold: 0.3,
   });
-  const fade = useSpring({
-    opacity: inView ? 1 : 0,
-    from: { opacity: 0 },
+  const headingSpring = useFadeUp(inView);
+  const para1Spring = useFadeUp(inView, 200);
+ const Fade = useFadeIn(inView, 300);
+  const [error, setError] = useState(false);
 
-    transform: inView ? "translateX(0px)" : "translateX(-20px)",
-    config: { tension: 170, friction: 26 },
-  });
+  useEffect(() => {
+    import("../canvas/Computer.jsx")
+      .then(() => {
+        console.log("3D model loaded successfully.");
+      })
+      .catch((err) => {
+        console.error("Error loading 3D model:", err);
+        setError(true);
+      });
+  }, []);
   const cardRef = useRef();
   const handleMouseMove = (e) => {
     const card = cardRef.current;
@@ -33,7 +48,7 @@ const AboutHero = () => {
         <animated.div
           ref={cardRef}
           onMouseMove={handleMouseMove}
-          style={fade}
+          style={Fade}
           className={`w-full h-full group about-card transition-all duration-300 left md:w-1/2 rounded-2xl shadow-lg mb-8 md:mb-0 md:p-4 `}
         >
           <div className="glow-overlay" />
@@ -42,13 +57,13 @@ const AboutHero = () => {
             ref={Ref}
           >
             <animated.h1
-              style={fade}
+              style={headingSpring}
               className="text-2xl md:text-3xl text-white font-bold text-center highlighted-text"
             >
               About Me
             </animated.h1>
             <animated.p
-              style={fade}
+              style={para1Spring}
               className="text-secondary text-[14px] md:text-base text-justify"
             >
               I specialize in building scalable, secure web solutions with a
@@ -62,11 +77,11 @@ const AboutHero = () => {
         </animated.div>
         <animated.div
           ref={Ref}
-          style={fade}
+          style={Fade}
           className="w-full md:w-1/2 rounded-2xl flex justify-center items-center shadow-lg h-64 md:h-auto"
         >
           <div className="flex justify-center items-center p-4 w-full h-100">
-            <ComputerCanvas />
+            {error ? <Error /> : <ComputerCanvas />}
           </div>
         </animated.div>
       </div>

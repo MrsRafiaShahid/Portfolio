@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
  const rafia ="/assets/rafia.jpeg"
 import "../../index.css";
+import { useFadeIn } from "../../utils/motion";
 import { TypedComponent } from "./TypedComponent";
 import { useSpring, animated } from "@react-spring/web";
 import { useInView } from "react-intersection-observer";
@@ -9,13 +10,7 @@ const Hero = () => {
     triggerOnce: false,
     threshold: 0.3,
   });
-  const fade = useSpring({
-    opacity: inView ? 1 : 0,
-    from: { opacity: 0 },
-    transform: inView ? "translateX(0px)" : "translateX(-20px)",
-    config: { tension: 170, friction: 26 },
-  });
-
+  const fade =  useFadeIn(inView,300)
   return (
     <>
       <section className="min-h-screen min-w-full flex flex-col md:flex-row items-center justify-center">
@@ -52,9 +47,9 @@ const Hero = () => {
             </div>
           </animated.div>
         </div>
-        <div className="w-50 absolute min-h-screen top-85 left-0 md:top-0 md:left-2/3 md:w-2/6 md:h-full flex gap-10 mx-20 justify-center items-center">
+        <animated.div style={fade} ref={Ref} className="w-50 absolute min-h-screen top-85 left-0 md:top-0 md:left-1/2 md:w-2/6 md:h-full flex gap-10 mx-20 justify-center items-center">
           <img src={rafia} alt="" className="w-[150px] md:w-1/2 rounded-full flex justify-center items-center"/>
-        </div>
+        </animated.div>
       </section>
     </>
   );

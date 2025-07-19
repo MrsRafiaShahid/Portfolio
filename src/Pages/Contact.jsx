@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 import { lazy, Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import useAlert from "../components/hooks/useAlert.js";
@@ -8,6 +9,7 @@ import {
   Loader,
 } from "../components";
 import { AnimationProvider } from "../components/context/AnimationContext.jsx";
+import SectionWrapper from "../hoc/SectionWrapper.jsx";
 
 const AnimateRobot = lazy(() => import("../components/canvas/AnimateRobot.jsx"));
 
@@ -34,8 +36,7 @@ const Contact = () => {
         {alert.show && <Alert {...alert} />}
         
         <AnimationProvider>
-          <div className="flex w-[135vw] md:w-[50%] justify-center items-center flex-col md:min-h-full">
-            {/* Removed ThemeProvider and used Contactform directly */}
+          <div className="flex max-w-full md:w-[50%] justify-center items-center flex-col md:min-h-full">
             <Contactform showAlert={showAlert} hideAlert={hideAlert} />
           </div>
 
@@ -66,4 +67,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default SectionWrapper(Contact,"/contact");

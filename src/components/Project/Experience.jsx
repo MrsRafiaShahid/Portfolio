@@ -5,21 +5,14 @@ import { experiences } from "../../constants";
 import Timeline from "./Timeline";
 import { useInView } from "react-intersection-observer";
 import { useSpring, animated } from "@react-spring/web";
+import { useFadeUp } from "../../utils/motion";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Experience = () => {
   const [ref, inView] = useInView({ triggerOnce: false, threshold: 0.3 });
-  const titleSpring = useSpring({
-    opacity: inView ? 1 : 0,
-    transform: inView ? "translateY(0px)" : "translateY(20px)",
-    config: { tension: 170, friction: 26 },
-  });
-  const paraSpring = useSpring({
-    opacity: inView ? 1 : 0,
-    transform: inView ? "translateY(0px)" : "translateY(20px)",
-    config: { tension: 170, friction: 26 },
-  });
+  const titleSpring =  useFadeUp(inView)
+  const paraSpring = useFadeUp(inView,200)
   return (
     <section className="section-padding md:mt-20 mt-10 px-5 xl:px-0">
       <animated.div style={titleSpring} ref={ref}>

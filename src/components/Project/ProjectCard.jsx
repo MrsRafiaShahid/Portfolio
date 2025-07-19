@@ -42,7 +42,6 @@ const ProjectCard = ({
       api.start({
         opacity: 1,
         x: 0,
-        // delay: index * 200,
         immediate: true,
       });
     } else {

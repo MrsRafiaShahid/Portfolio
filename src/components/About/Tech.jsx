@@ -3,20 +3,15 @@ import React from "react";
 import { technologies } from "../../constants";
 import BallCanvas from "../canvas/BallCanvas";
 import { useInView } from "react-intersection-observer";
-import { useSpring, animated } from "@react-spring/web";
+import { animated } from "@react-spring/web";
+import { useFadeIn } from "../../utils/motion";
 
 const Tech = () => {
   const { ref: Ref, inView } = useInView({
     triggerOnce: false,
     threshold: 0.3,
   });
-  const fade = useSpring({
-    opacity: inView ? 1 : 0,
-    from: { opacity: 0 },
-    delay: 100,
-    transform: inView ? "translateY(0px)" : "translateY(20px)",
-    config: { tension: 170, friction: 26 },
-  });
+  const fade = useFadeIn(inView,300)
   return (
     <>
       <animated.div
