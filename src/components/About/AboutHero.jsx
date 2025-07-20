@@ -10,7 +10,7 @@ const AboutHero = () => {
     threshold: 0.3,
   });
   const headingSpring = useFadeUp(inView);
-  const para1Spring = useFadeUp(inView, 200);
+  const paraSpring = useFadeUp(inView, 200);
  const Fade = useFadeIn(inView, 300);
   const [error, setError] = useState(false);
 
@@ -56,7 +56,7 @@ const AboutHero = () => {
               About Me
             </animated.h1>
             <animated.p
-              style={para1Spring}
+              style={paraSpring}
               className="text-secondary text-[14px] md:text-base text-justify"
             >
               I specialize in building scalable, secure web solutions with a
