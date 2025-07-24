@@ -53,13 +53,13 @@ const FeedbackCard = ({
             <p className="mt-1 text-secondary text-[12px]">
               <span className="text-primary ">{designation}</span> at {company}
             </p>
-            <div className="w-12 h-12 rounded-full overflow-hidden">
+            {/* <div className="w-12 h-12 rounded-full overflow-hidden">
               <img
                 src={image}
                 alt={`feedback_by-${name}`}
                 className="w-full h-full object-cover"
               />
-              </div>
+              </div> */}
           </div>
         </div>
       </animated.div>

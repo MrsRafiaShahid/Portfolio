@@ -81,7 +81,7 @@ const ProjectCard = ({
               <img
                 src={image}
                 alt={title}
-                className="w-full h-full object-cover rounded-2xl"
+                className="w-full h-full object-contain rounded-2xl"
               />
               <div className="absolute inset-0 flex justify-end m-3 gap-2">
                 <div

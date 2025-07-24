@@ -20,16 +20,16 @@
  const insta="/assets/social/insta.png"
  const threejs ="/assets/tech/threejs.svg"
  const redux="/assets/tech/redux.png"
- const jane="/assets/review/jane.jpg"
- const alice="/assets/review/alice.jpg"
- const bob="/assets/review/bob.jpg"
- const john="/assets/review/john.jpg"
+//  const jane="/assets/review/jane.jpg"
+//  const alice="/assets/review/alice.jpg"
+//  const bob="/assets/review/bob.jpg"
+//  const john="/assets/review/john.jpg"
  const task="/assets/project/task.png"
  const pokemon="/assets/project/pokemon.png"
  const weather="/assets/project/weather.png"
  const xclone="/assets/project/x-clone.png"
  const portfolio="/assets/project/portfolio.png"
- const mubrrah ="/assets/review/mubrrah.jpg"
+//  const mubrrah ="/assets/review/mubrrah.jpg"
  const githubicon="/assets/social/github.svg"
 
 export const navlinks = [
@@ -314,7 +314,7 @@ export const testimonials = [
     name: "Ali Khan",
     designation: "Collaborator on Open Source",
     company: "Riphah international University",
-    image: john,
+    // image: john,
   },
   {
     testimonial:
@@ -322,14 +322,14 @@ export const testimonials = [
     name: "Laiba Nadeem",
     designation: "Professor of Computer Science",
     company: "Bano Qabil",
-    image: jane,
+    // image: jane,
   },
   {
     testimonial:"Working with Rafia on multiple academic and coding projects has been a consistently positive experience. She brings clarity to complex problems and always contributes thoughtfully to team discussions. Her strong sense of responsibility and calm approach to challenges make her a reliable collaborator and a valuable asset in any technical team.",
     name:"Mubrrah Shabbir",
     designation:"ADP Computer Science Classmate",
     company:"Riphah International University",
-    image:mubrrah
+    // image:mubrrah
   },
   {
     testimonial:
@@ -337,15 +337,15 @@ export const testimonials = [
     name: "Maryam Chughtai",
     designation: "Classmate & Project Collaborator",
     company: "Riphah International University",
-    image: alice,
+    // image: alice,
   },
   {
     testimonial:
       "Rafia was quick to grasp new concepts and showed a real passion for clean code and design. A joy to mentor.",
-    name: "Bob Brown",
+    name: "Muntansaar",
     designation: "Web MERN Stack Mentor",
     company: "Bano Qabil",
-    image: bob,
+    // image: bob,
   },
 ];
 export const social = [

@@ -5,10 +5,12 @@ import { useInView } from "react-intersection-observer";
 import { services } from "../../constants/index.js";
 import ServiceCard from "./ServiceCard.jsx";
 import { useFadeUp } from "../../utils/motion.js";
+import AboutBg from "./AboutBg.jsx";
 const AboutSection = () => {
   const [ref, inView] = useInView({ triggerOnce: false, threshold: 0.3 });
   const titleSpring = useFadeUp(inView)
   const paraSpring = useFadeUp(inView,200)
+  const videoSpring=useFadeUp(inView)
   return (
     <>
       <div
@@ -23,6 +25,8 @@ const AboutSection = () => {
             Overview..
           </h2>
         </animated.div>
+        <div className="flex justify-center">
+        
         <animated.p
         ref={ref}
           style={paraSpring}
@@ -34,6 +38,11 @@ const AboutSection = () => {
           React, and Node.js — allowing me to create responsive user interfaces
           and robust backend systems.
         </animated.p>
+        <animated.div ref={ref} style={videoSpring} className="w-full m-auto h-1/4 mt-5 flex justify-center">
+          <AboutBg/>
+        </animated.div>
+          
+        </div>
         <div className="mt-10 text-secondary flex flex-wrap gap-10 mb-10 ">
           {services.map((service, index) => (
             <ServiceCard key={service.title} index={index} {...service} />

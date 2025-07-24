@@ -1,5 +1,6 @@
 /* eslint-disable react-refresh/only-export-components */
 
+import AboutBg from "../components/About/AboutBg.jsx";
 import {
   AboutHero,
   AboutSection,
@@ -11,7 +12,8 @@ import SectionWrapper from "../hoc/SectionWrapper.jsx";
 const About = () => {
   return (
     <>
-      <AboutHero />
+      {/* <AboutBg/> */}
+      {/* <AboutHero /> */}
       <AboutSection />
       <Tech />
       <Testimonials />

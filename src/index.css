@@ -6,7 +6,7 @@
   --gradient: radial-gradient(circle, #e5e5e5 0%, #fff 100%);
 }
 @theme {
-  --color-primary: #230ffdff;
+  --color-primary: #ffff;
   --color-secondary: #aaa6c3;
   --color-tertiary: #151030;
   --color-blue-100: #100d25;
@@ -30,7 +30,8 @@
 
 html,
 body {
-  width: 99vw;
+  width: 100vw;
+  overflow-x: hidden;
   scroll-behavior: smooth;
   background: #000000d1;
 }
