@@ -9,7 +9,7 @@ const AboutBg = () => {
   }, []);
   return (
     <>
-        <video className='h-72  object-contain ' ref={videoRef} src={computer} typeof='video/mp4' muted  autoPlay loop ></video>
+    <video className='h-72 object-contain' ref={videoRef} src={computer} typeof='video/mp4' muted  autoPlay loop ></video>
     </>
   )
 }

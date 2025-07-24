@@ -314,22 +314,19 @@ export const testimonials = [
     name: "Ali Khan",
     designation: "Collaborator on Open Source",
     company: "Riphah international University",
-    // image: john,
   },
   {
     testimonial:
-      "Rafia has consistently demonstrated a strong grasp of core computer science principles and a dedication to continuous improvement. Her disciplined work ethic, attention to detail, and ability to apply theoretical knowledge to practical projects reflect a promising future in the tech industry. She is a dependable and capable individual, and I fully support her professional endeavors.",
+      "Rafia shows a solid understanding of computer science, applies theory to practice well, and works with focus and discipline. She’s dependable and has strong potential in the tech industry.",
     name: "Laiba Nadeem",
-    designation: "Professor of Computer Science",
+    designation: "Classmate in Web development",
     company: "Bano Qabil",
-    // image: jane,
   },
   {
-    testimonial:"Working with Rafia on multiple academic and coding projects has been a consistently positive experience. She brings clarity to complex problems and always contributes thoughtfully to team discussions. Her strong sense of responsibility and calm approach to challenges make her a reliable collaborator and a valuable asset in any technical team.",
+    testimonial:"Working with Rafia on various projects has been a consistently positive experience. She tackles complex problems with clarity, contributes thoughtfully in teams, and remains calm under pressure—making her a reliable and valuable teammate.",
     name:"Mubrrah Shabbir",
     designation:"ADP Computer Science Classmate",
     company:"Riphah International University",
-    // image:mubrrah
   },
   {
     testimonial:
@@ -337,7 +334,6 @@ export const testimonials = [
     name: "Maryam Chughtai",
     designation: "Classmate & Project Collaborator",
     company: "Riphah International University",
-    // image: alice,
   },
   {
     testimonial:
@@ -345,7 +341,6 @@ export const testimonials = [
     name: "Muntansaar",
     designation: "Web MERN Stack Mentor",
     company: "Bano Qabil",
-    // image: bob,
   },
 ];
 export const social = [
