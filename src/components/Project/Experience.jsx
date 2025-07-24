@@ -4,13 +4,13 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { experiences } from "../../constants";
 import Timeline from "./Timeline";
 import { useInView } from "react-intersection-observer";
-import { useSpring, animated } from "@react-spring/web";
+import { animated } from "@react-spring/web";
 import { useFadeUp } from "../../utils/motion";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Experience = () => {
-  const [ref, inView] = useInView({ triggerOnce: false, threshold: 0.3 });
+  const [ref, inView] =useInView({ triggerOnce: false, threshold: 0.1 });
   const titleSpring =  useFadeUp(inView)
   const paraSpring = useFadeUp(inView,200)
   return (

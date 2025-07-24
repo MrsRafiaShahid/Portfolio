@@ -1,5 +1,6 @@
 /* eslint-disable react-refresh/only-export-components */
 import { Experience, Project } from "../components";
+import Certificate from "../components/Project/Certificate";
 import { SectionWrapper } from "../hoc";
 
 const Projects = () => {
@@ -7,6 +8,7 @@ const Projects = () => {
     <>
       <Experience />
       <Project />
+      <Certificate/>
     </>
     
   );

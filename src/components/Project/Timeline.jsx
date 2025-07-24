@@ -5,7 +5,7 @@ import TimelineItem from "./TimelineItem";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Timeline = ({ items = [] }) => {
+const Timeline = ({items = [] }) => {
   useGSAP(() => {
     // Animate each card in individually
     gsap.utils.toArray(".timeline-card").forEach((card) => {
@@ -26,8 +26,7 @@ const Timeline = ({ items = [] }) => {
 
     // Animate timeline line scaleY as scroll progress
     gsap.set(".timeline-line", { scaleY: 0, transformOrigin: "top center" });
-
-    ScrollTrigger.create({
+  ScrollTrigger.create({
       trigger: ".timeline",
       start: "top center",
       end: "bottom center",

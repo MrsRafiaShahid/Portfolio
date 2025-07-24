@@ -78,7 +78,7 @@ const Navbar = () => {
         </div>
         <div
           className={`sm:hidden flex items-start justify-center absolute top-15 right-0 min-w-2/6  transition-colors translate-x-0 ${
-            open ? "h-screen" : "hidden"
+            open ? "h-fit" : "hidden"
           } bg-gradient-to-b to-black  from-slate-950 from-20% z-100`}
         >
           <ul className="flex flex-col gap-4  text-sm text-gray-700 ">

@@ -17,7 +17,7 @@ const AboutSection = () => {
         ref={ref}
         className="min-h-screen mt-12 flex flex-col items-center justify-center mx-auto px-4 sm:px-6 lg:px-8"
       >
-        <animated.div style={titleSpring} className="md:w-2/3 w-full">
+        <animated.div style={titleSpring} className="w-full">
           <p className="md:text-[18px] text-[14px] text-secondary uppercase tracking-wider text-start">
             Introduction
           </p>

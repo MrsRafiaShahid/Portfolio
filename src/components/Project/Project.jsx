@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 /* eslint-disable no-unused-vars */
 import { useSpring, animated } from "@react-spring/web";
 import React from "react";
@@ -5,6 +6,7 @@ import { useInView } from "react-intersection-observer";
 import { works } from "../../constants";
 import ProjectCard from "./ProjectCard";
 import { useFadeUp } from "../../utils/motion";
+import { SectionWrapper } from "../../hoc";
 
 const Project = () => {
   const [ref, inView] = useInView({ triggerOnce: false, threshold: 0.3 });
@@ -39,4 +41,4 @@ const Project = () => {
   );
 };
 
-export default Project;
+export default SectionWrapper(Project,"");

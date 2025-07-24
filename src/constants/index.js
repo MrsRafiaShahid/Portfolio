@@ -1,31 +1,30 @@
- const about = "/assets/navlogo/about.svg";
- const project = "/assets/navlogo/project.svg";
- const contact = "/assets/navlogo/contact.svg";
- const web = "/assets/about/web.png";
- const mobile = "/assets/about/mobile.png";
- const backend = "/assets/about/backend.png";
- const creator = "/assets/about/creator.png";
- const reactjs ="/assets/tech/reactjs.png";
- const css = "/assets/tech/css.png";
-//  const figma = "/assets/tech/figma.png";
- const git = "/assets/tech/git.png";
- const html = "/assets/tech/html.png";
- const javascript = "/assets/tech/javascript.png";
- const mongodb = "/assets/tech/mongodb.png";
- const nodejs = "/assets/tech/nodejs.png";
- const tailwind = "/assets/tech/tailwind.png";
- const x ="/assets/social/x.png";
- const fb ="/assets/social/fb.png";
- const linkedlin ="/assets/social/linkedlin.png";
- const insta="/assets/social/insta.png"
-//  const threejs ="/assets/tech/threejs.svg"
-//  const redux="/assets/tech/redux.png"
- const task="/assets/project/task.png"
- const pokemon="/assets/project/pokemon.png"
- const weather="/assets/project/weather.png"
- const xclone="/assets/project/x-clone.png"
- const portfolio="/assets/project/portfolio.png"
- const githubicon="/assets/social/github.svg"
+const about = "/assets/navlogo/about.svg";
+const project = "/assets/navlogo/project.svg";
+const contact = "/assets/navlogo/contact.svg";
+const web = "/assets/about/web.png";
+const mobile = "/assets/about/mobile.png";
+const backend = "/assets/about/backend.png";
+const creator = "/assets/about/creator.png";
+const reactjs = "/assets/tech/reactjs.png";
+const css = "/assets/tech/css.png";
+const git = "/assets/tech/git.png";
+const html = "/assets/tech/html.png";
+const javascript = "/assets/tech/javascript.png";
+const mongodb = "/assets/tech/mongodb.png";
+const nodejs = "/assets/tech/nodejs.png";
+const tailwind = "/assets/tech/tailwind.png";
+const x = "/assets/social/x.png";
+const fb = "/assets/social/fb.png";
+const linkedlin = "/assets/social/linkedlin.png";
+const insta = "/assets/social/insta.png";
+const task = "/assets/project/task.png";
+const pokemon = "/assets/project/pokemon.png";
+const weather = "/assets/project/weather.png";
+const xclone = "/assets/project/x-clone.png";
+const portfolio = "/assets/project/portfolio.png";
+const githubicon = "/assets/social/github.svg";
+const webdev = "/assets/certificate/web.jpeg";
+const mern = "/assets/certificate/mern.jpeg";
 
 export const navlinks = [
   {
@@ -98,9 +97,7 @@ export const experiences = [
 
     points: [
       "Crafted responsive and interactive user interfaces using HTML, CSS, and JavaScript.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
       "Optimized web performance and accessibility while ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
     ],
   },
   {
@@ -110,7 +107,6 @@ export const experiences = [
 
     points: [
       "Built scalable server-side applications using Node.js, Python, and other related technolgies",
-      "Designed RESTful APIs and managed databases (SQL & NoSQL). Implemented authentication, security, and data processing for efficient backend operations.",
       "Implemented authentication, security, and data processing for efficient backend operations.",
     ],
   },
@@ -121,11 +117,57 @@ export const experiences = [
     points: [
       "Delivered end-to-end web solutions by combining front-end and back-end expertise.",
       "Worked with MERN/MEAN stacks to build full-fledged applications.",
-      "Streamlined deployment using cloud services and CI/CD pipelines.",
     ],
   },
 ];
-
+export const certification = [
+  {
+    title: "Web Development",
+    platform: "Bano Qabil (PITB Accredited)",
+    image: webdev,
+    tags: [
+      {
+        name: "html",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "css",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "bootstrap",
+        color: "violet-gradient",
+      },
+      {
+        name: "javascript",
+        color: "green-text-gradient",
+      },
+    ],
+  },
+  {
+    title: "Web MERN Stack",
+    platform: "Bano Qabil (PITB Accredited)",
+    image: mern,
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "nodejs",
+        color: "green-text-gradient",
+      },
+      {
+        name: "mongodb",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "express",
+        color: "orange-text-gradient",
+      },
+    ],
+  },
+];
 export const technologies = [
   {
     name: "HTML 5",
@@ -159,21 +201,9 @@ export const technologies = [
     name: "git",
     icon: git,
   },
-  // {
-  //   name: "figma",
-  //   icon: figma,
-  // },
-  // {
-  //   name: "threejs",
-  //   icon: threejs,
-  // },
-  // {
-  //   name: "redux",
-  //   icon: redux,
-  // },
 ];
 export const works = [
-   {
+  {
     title: "X Clone",
     description:
       "Developed a social media application similar to X (formerly Twitter) that allows users to post updates, follow others, and interact with posts. Implemented features like real-time updates, user authentication, and a responsive design. ",
@@ -231,10 +261,9 @@ export const works = [
     ],
     image: portfolio,
     source_code_link: "https://github.com/MrsRafiaShahid/Portfolio",
-    visit_link:"/"
-
+    visit_link: "/",
   },
- 
+
   {
     title: "Weather App",
     description:
@@ -255,7 +284,7 @@ export const works = [
     ],
     image: weather,
     source_code_link: "https://github.com/MrsRafiaShahid/weather",
-    visit_link:"https://weather-plum-rho.vercel.app/"
+    visit_link: "https://weather-plum-rho.vercel.app/",
   },
   {
     title: "Task Management App",
@@ -266,7 +295,7 @@ export const works = [
         name: "react",
         color: "blue-text-gradient",
       },
-  
+
       {
         name: "tailwindcss",
         color: "pink-text-gradient",
@@ -274,10 +303,10 @@ export const works = [
     ],
     image: task,
     source_code_link: "https://github.com/MrsRafiaShahid/Task-App",
-    visit_link: "https://task-app-ruby-tau.vercel.app/"
+    visit_link: "https://task-app-ruby-tau.vercel.app/",
   },
- 
-   {
+
+  {
     title: "Pokemon App",
     description:
       "Developed a Pokemon application that allows users to search for and view details about various Pokemon. The app fetches data from the PokeAPI and displays it in a user-friendly interface, including images, types, and abilities. The app is styled with Tailwind CSS for a modern look and feel.",
@@ -297,7 +326,7 @@ export const works = [
     ],
     image: pokemon,
     source_code_link: "https://github.com/MrsRafiaShahid/Pokemon",
-    visit_link: "https://pokemon-ruddy-chi.vercel.app/"
+    visit_link: "https://pokemon-ruddy-chi.vercel.app/",
   },
 ];
 
@@ -317,10 +346,11 @@ export const testimonials = [
     company: "Bano Qabil",
   },
   {
-    testimonial:"Working with Rafia on various projects has been a consistently positive experience. She tackles complex problems with clarity, contributes thoughtfully in teams, and remains calm under pressure—making her a reliable and valuable teammate.",
-    name:"Mubrrah Shabbir",
-    designation:"ADP Computer Science Classmate",
-    company:"Riphah International University",
+    testimonial:
+      "Working with Rafia on various projects has been a consistently positive experience. She tackles complex problems with clarity, contributes thoughtfully in teams, and remains calm under pressure—making her a reliable and valuable teammate.",
+    name: "Mubrrah Shabbir",
+    designation: "ADP Computer Science Classmate",
+    company: "Riphah International University",
   },
   {
     testimonial:
@@ -359,8 +389,8 @@ export const social = [
     url: "https://www.linkedin.com/in/rafia-shahid-285b37374",
   },
   {
-    name:"x",
-    imgPath:x,
-    url:"https://x.com/"
-  }
+    name: "x",
+    imgPath: x,
+    url: "https://x.com/",
+  },
 ];
