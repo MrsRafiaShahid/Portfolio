@@ -45,7 +45,7 @@ const Hero = () => {
             </div>
             <div className="flex md:flex-row flex-col justify-center items-center gap-2 md:gap-4">
               <Button title="Resume" />
-              <a href="/about" className="text-white ">
+              <a href="/about" className="text-white block md:hidden ">
                 <Button title="Go to About"/>
                 </a>
             </div>
