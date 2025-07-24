@@ -8,6 +8,7 @@ export const NavItems = () => {
   const [activeLink, setActiveLink] = useState("");
   const handleActiveLink = (id) => {
     setActiveLink(id);
+      window.scrollTo(0, 0);
   };
   const location = useLocation();
   return (

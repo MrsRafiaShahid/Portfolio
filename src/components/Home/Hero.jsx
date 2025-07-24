@@ -1,16 +1,17 @@
 /* eslint-disable no-unused-vars */
- const rafia ="/assets/rafia.jpeg"
+const rafia = "/assets/rafia.jpeg";
+import { Link, useNavigate } from "react-router-dom";
 import "../../index.css";
 import { useFadeIn } from "../../utils/motion";
 import { TypedComponent } from "./TypedComponent";
 import { useSpring, animated } from "@react-spring/web";
 import { useInView } from "react-intersection-observer";
 const Hero = () => {
-  const { ref: Ref, inView } = useInView({
+    const { ref: Ref, inView } = useInView({
     triggerOnce: false,
     threshold: 0.3,
   });
-  const fade =  useFadeIn(inView,300)
+  const fade = useFadeIn(inView, 300);
   return (
     <>
       <section className="min-h-screen min-w-full flex flex-col md:flex-row items-center justify-center">
@@ -42,13 +43,16 @@ const Hero = () => {
                 clean, maintainable code and seamless user experiences.
               </p>
             </div>
-            <div className="flex justify-center items-center">
-              <Button />
+            <div className="flex md:flex-row flex-col justify-center items-center gap-2 md:gap-4">
+              <Button title="Resume" />
+              <a href="/about" className="text-white ">
+                <Button title="Go to About"/>
+                </a>
             </div>
           </animated.div>
         </div>
-        <animated.div style={fade} ref={Ref} className="w-50 absolute min-h-screen top-85 left-0 md:top-0 md:left-1/2 md:w-2/6 md:h-full flex gap-10 mx-20 justify-center items-center">
-          <img src={rafia} alt="" className="w-[150px] md:w-1/2 rounded-full flex justify-center items-center"/>
+        <animated.div style={fade} ref={Ref} className="w-50 absolute min-h-screen top-96 left-0 md:top-0 md:left-1/2 md:w-2/6 md:h-full flex gap-10 mx-20 justify-center items-center">
+          <img src={rafia} alt="" className="w-[145px] md:w-1/2 rounded-full flex justify-center items-center"/>
         </animated.div>
       </section>
     </>
@@ -57,13 +61,11 @@ const Hero = () => {
 
 export default Hero;
 
-export const Button = () => {
+export const Button = ({ title}) => {
   return (
     <>
-      <button
-        className="w-30 bg-tertiary/80 border-none rounded-2xl text-secondary h-10 hover:bg-tertiary/100 hover:border-primray hover:border-2 transition-all duration-300 ease-in-out px-4 font-semibold text-lg "
-      >
-        Resume
+      <button className={`w-37 bg-tertiary/80 border-none rounded-2xl text-secondary h-10 hover:bg-tertiary/100 hover:border-primary hover:border-2 transition-all duration-300 ease-in-out px-4 font-semibold text-lg `}>
+        {title}
       </button>
     </>
   );
