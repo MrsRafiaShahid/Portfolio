@@ -7,7 +7,7 @@
  const creator = "/assets/about/creator.png";
  const reactjs ="/assets/tech/reactjs.png";
  const css = "/assets/tech/css.png";
- const figma = "/assets/tech/figma.png";
+//  const figma = "/assets/tech/figma.png";
  const git = "/assets/tech/git.png";
  const html = "/assets/tech/html.png";
  const javascript = "/assets/tech/javascript.png";
@@ -18,18 +18,13 @@
  const fb ="/assets/social/fb.png";
  const linkedlin ="/assets/social/linkedlin.png";
  const insta="/assets/social/insta.png"
- const threejs ="/assets/tech/threejs.svg"
- const redux="/assets/tech/redux.png"
-//  const jane="/assets/review/jane.jpg"
-//  const alice="/assets/review/alice.jpg"
-//  const bob="/assets/review/bob.jpg"
-//  const john="/assets/review/john.jpg"
+//  const threejs ="/assets/tech/threejs.svg"
+//  const redux="/assets/tech/redux.png"
  const task="/assets/project/task.png"
  const pokemon="/assets/project/pokemon.png"
  const weather="/assets/project/weather.png"
  const xclone="/assets/project/x-clone.png"
  const portfolio="/assets/project/portfolio.png"
-//  const mubrrah ="/assets/review/mubrrah.jpg"
  const githubicon="/assets/social/github.svg"
 
 export const navlinks = [
@@ -148,7 +143,6 @@ export const technologies = [
     name: "React JS",
     icon: reactjs,
   },
-
   {
     name: "Tailwind CSS",
     icon: tailwind,
@@ -165,18 +159,18 @@ export const technologies = [
     name: "git",
     icon: git,
   },
-  {
-    name: "figma",
-    icon: figma,
-  },
-  {
-    name: "threejs",
-    icon: threejs,
-  },
-  {
-    name: "redux",
-    icon: redux,
-  },
+  // {
+  //   name: "figma",
+  //   icon: figma,
+  // },
+  // {
+  //   name: "threejs",
+  //   icon: threejs,
+  // },
+  // {
+  //   name: "redux",
+  //   icon: redux,
+  // },
 ];
 export const works = [
    {
