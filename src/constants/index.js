@@ -20,7 +20,7 @@ const insta = "/assets/social/insta.png";
 const task = "/assets/project/task.png";
 const pokemon = "/assets/project/pokemon.png";
 const weather = "/assets/project/weather.png";
-const xclone = "/assets/project/x-clone.png";
+const tweex = "/assets/project/tweex.png";
 const portfolio = "/assets/project/portfolio.png";
 const githubicon = "/assets/social/github.svg";
 const webdev = "/assets/certificate/web.jpeg";
@@ -204,9 +204,9 @@ export const technologies = [
 ];
 export const works = [
   {
-    title: "X Clone",
+    title: "TWEEX",
     description:
-      "Developed a social media application similar to X (formerly Twitter) that allows users to post updates, follow others, and interact with posts. Implemented features like real-time updates, user authentication, and a responsive design. ",
+      "Tweex is a playful social media web app inspired by X (Twitter), built with the MERN stack. It features posting, liking, commenting, and reposting—wrapped in a modern, responsive design with light/dark mode support. ",
     tags: [
       {
         name: "react",
@@ -233,9 +233,9 @@ export const works = [
         color: "yellow-text-gradient",
       },
     ],
-    image: xclone,
-    source_code_link: "https://github.com/MrsRafiaShahid/socialapp",
-    visit_link: "https://socialapp-3uig.onrender.com",
+    image:tweex,
+    source_code_link: "https://github.com/MrsRafiaShahid/Tweex",
+    visit_link: "https://tweex.onrender.com",
   },
   {
     title: "Portfolio Website",
