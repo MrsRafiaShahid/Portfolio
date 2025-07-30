@@ -1,7 +1,3 @@
-Here’s a polished and structured `README.md` for your portfolio project:
-
----
-
 # 🙋‍♀️ Portfolio by Rafia Shahid
 
 A sleek, responsive React + Vite portfolio website showcasing skills, projects, and background, with interactive 3D elements and contact functionality.
