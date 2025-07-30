@@ -14,6 +14,8 @@ const mongodb = "/assets/tech/mongodb.png";
 const nodejs = "/assets/tech/nodejs.png";
 const c = "/assets/tech/c++.png";
 const tailwind = "/assets/tech/tailwind.png";
+const redux = "/assets/tech/redux.png";
+const figma = "/assets/tech/figma.png";
 const x = "/assets/social/x.png";
 const fb = "/assets/social/fb.png";
 const linkedlin = "/assets/social/linkedlin.png";
@@ -200,6 +202,14 @@ export const technologies = [
   {
     name: "MongoDB",
     icon: mongodb,
+  },
+  {
+    name: "redux",
+    icon: redux,
+  },
+  {
+    name: "figma",
+    icon: figma,
   },
   {
     name: "C++",

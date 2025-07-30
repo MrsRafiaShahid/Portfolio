@@ -1,57 +1,18 @@
-import { Suspense } from "react";
-import { Canvas } from "@react-three/fiber";
+import React from "react";
+import "../../index.css"; // contains the glow animation
 
-import {
-  Decal,
-  Float,
-  OrbitControls,
-  Preload,
-  useTexture,
-} from "@react-three/drei";
-import CanvasLoader from "../Loader";
-
-const Ball = (props) => {
-  const [decal] = useTexture([props.icon]);
-
+const Ball = ({ icon }) => {
   return (
-    <>
-      <Float speed={1.75} rotationIntensity={1} floatIntensity={2}>
-        <ambientLight intensity={0.25} />
-        <directionalLight position={[0, 0, 0.5]} />
-        <mesh castShadow receiveShadow scale={2.75}>
-          <icosahedronGeometry args={[1, 2]} />
-          <meshStandardMaterial
-            color="#151030"
-            polygonOffset
-            polygonOffsetFactor={-5}
-            flatShading
-          />
-          <Decal
-            position={[0, 0, 1]}
-            rotation={[2 * Math.PI, 0, 6.25]}
-            scale={1.25}
-            objectfit="cover"
-            flatShading
-            map={decal}
-          />
-        </mesh>
-      </Float>
-    </>
+    <div className="ball-wrapper w-20 h-20 flex items-center justify-center">
+      <div className="ball w-16 h-16 rounded-full flex items-center justify-center">
+        <img
+          src={icon}
+          alt="tech-icon"
+          className="w-8 h-8 pointer-events-none select-none"
+        />
+      </div>
+    </div>
   );
 };
 
-const BallCanvas = ({ icon }) => {
-  return (
-    <Canvas frameloop="demand" gl={{ preserveDrawingBuffer: true }}>
-      <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls enableZoom={false} />
-        <Float speed={1.75} rotationIntensity={1} floatIntensity={2}>
-          <Ball icon={icon} />
-        </Float>
-      </Suspense>
-
-      <Preload all />
-    </Canvas>
-  );
-};
-export default BallCanvas;
+export default Ball;

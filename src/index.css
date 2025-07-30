@@ -31,6 +31,21 @@ body {
   overflow-x: hidden;
   background: #000000d1;
 }
+.ball-wrapper {
+  position: relative;
+}
+
+.ball {
+  background-color: #151030;
+  transition: box-shadow 0.3s ease-in-out;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.ball:hover {
+  box-shadow: 0 0 15px 6px rgba(139, 92, 246, 0.6); /* violet glow */
+}
+
+
 
 .container {
   width: 100%;
