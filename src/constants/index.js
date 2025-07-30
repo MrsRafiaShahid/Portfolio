@@ -12,6 +12,7 @@ const html = "/assets/tech/html.png";
 const javascript = "/assets/tech/javascript.png";
 const mongodb = "/assets/tech/mongodb.png";
 const nodejs = "/assets/tech/nodejs.png";
+const c = "/assets/tech/c++.png";
 const tailwind = "/assets/tech/tailwind.png";
 const x = "/assets/social/x.png";
 const fb = "/assets/social/fb.png";
@@ -22,6 +23,7 @@ const pokemon = "/assets/project/pokemon.png";
 const weather = "/assets/project/weather.png";
 const tweex = "/assets/project/tweex.png";
 const portfolio = "/assets/project/portfolio.png";
+const hangman = "/assets/project/hangman.png";
 const githubicon = "/assets/social/github.svg";
 const webdev = "/assets/certificate/web.jpeg";
 const mern = "/assets/certificate/mern.jpeg";
@@ -74,7 +76,7 @@ export const services = [
     icon: backend,
   },
   {
-    title: "Content Creator",
+    title: "C++ Developer",
     icon: creator,
   },
 ];
@@ -84,10 +86,9 @@ export const experiences = [
     icon: reactjs,
     iconBg: "#383E56",
     points: [
-      "Developed dynamic single-page applications (SPAs) using React.js and Next.js.",
-      "Utilized state management (Redux, Context API) and hooks for efficient data flow",
-      "Integrated APIs and optimized components for high performance.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Built responsive and interactive UI components using React.js, Tailwind CSS, and modern hooks like useState, useEffect, and useContext.",
+      "Implemented dynamic forms, animations, and context-based state management for improved user experience.",
+      "Integrated APIs and handled asynchronous data with Axios and TanStack Query.",
     ],
   },
   {
@@ -101,24 +102,27 @@ export const experiences = [
     ],
   },
   {
-    title: "Backend Developer",
-    icon: nodejs,
-    iconBg: "#383E56",
-
-    points: [
-      "Built scalable server-side applications using Node.js, Python, and other related technolgies",
-      "Implemented authentication, security, and data processing for efficient backend operations.",
-    ],
-  },
-  {
     title: "Full stack Developer",
     icon: reactjs,
     iconBg: "#E6DEDD",
     points: [
-      "Delivered end-to-end web solutions by combining front-end and back-end expertise.",
-      "Worked with MERN/MEAN stacks to build full-fledged applications.",
+      "Built full-stack applications using the MERN stack (MongoDB, Express.js, React.js, Node.js).",
+      "Created features like user authentication, real-time post updates, profile management, and CRUD APIs.",
+      "Used tools like Git, Postman, and Render for version control, testing, and deployment."
     ],
   },
+  {
+    title: "C++ Developer",
+    icon: c,
+    iconBg: "#383E56",
+
+    points: [
+      "Developed foundational C++ applications as part of academic and personal learning projects, emphasizing clean, readable, and modular code.",
+      "Applied object-oriented programming (OOP) principles to structure and organize code for scalability and maintenance.",
+      "Strengthened debugging, logic-building, and core programming skills through structured development"
+    ],
+  },
+  
 ];
 export const certification = [
   {
@@ -196,6 +200,10 @@ export const technologies = [
   {
     name: "MongoDB",
     icon: mongodb,
+  },
+  {
+    name: "C++",
+    icon: c,
   },
   {
     name: "git",
@@ -306,6 +314,24 @@ export const works = [
     visit_link: "https://task-app-ruby-tau.vercel.app/",
   },
 
+  {
+    title: "Hangman Console Game",
+    description:
+      "A classic word-guessing game built in C++ that runs in the terminal. Players try to guess a hidden word one letter at a time, with a limited number of incorrect guesses allowed.",
+    tags: [
+      {
+        name: "C++",
+        color: "blue-text-gradient",
+      },
+           {
+        name: "File Input/Output",
+        color: "green-text-gradient",
+      },
+    ],
+    image: hangman,
+    source_code_link: "https://github.com/MrsRafiaShahid/Hangman",
+    // visit_link: "https://pokemon-ruddy-chi.vercel.app/",
+  },
   {
     title: "Pokemon App",
     description:

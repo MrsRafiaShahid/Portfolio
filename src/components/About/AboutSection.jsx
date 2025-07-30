@@ -31,11 +31,7 @@ const AboutSection = () => {
         style={paraSpring}
           className="mt-4 text-secondary text-[17px] max-w-3xl md:w-2/3 w-full leading-[30px]"
         >
-          I am a passionate Full Stack Developer with hands-on experience in
-          designing, developing, and maintaining web applications from front to
-          back. My expertise spans across the MERN stack — MongoDB, Express.js,
-          React, and Node.js — allowing me to create responsive user interfaces
-          and robust backend systems.
+         I am a passionate Full Stack Developer with hands-on experience in designing, developing, and maintaining web applications end-to-end. With expertise in the MERN stack — MongoDB, Express.js, React, and Node.js — I build responsive user interfaces and robust backend systems. Additionally, my strong foundation in C++ enhances my problem-solving skills and system-level development capabilities, enabling me to deliver high-performance, scalable solutions.
         </animated.p>
         <animated.div style={videoSpring} className="w-full m-auto h-1/4 mt-5 flex justify-center">
           <AboutBg/>

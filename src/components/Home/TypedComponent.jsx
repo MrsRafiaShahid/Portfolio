@@ -9,7 +9,7 @@ export const TypedComponent = () => {
     const typed = new Typed(el.current, {
       strings: [
         "<i> I'm Rafia</i> Shahid.",
-        "&amp; I'm  <span> MERN</span> Stack Developer.",
+        "&amp; I'm  <span> Full Stack</span>(MERN) Developer.",
       ],
       typeSpeed: 50,
       backSpeed: 30,
