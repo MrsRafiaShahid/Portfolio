@@ -2,7 +2,7 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 
 const ErrorPage = () => {
-    const navigate =useNavigate
+    const navigate =useNavigate()
   return (
     <>
     <div className="min-h-screen bg-[#151920] text-white flex flex-col items-center justify-center px-6 error z-100">

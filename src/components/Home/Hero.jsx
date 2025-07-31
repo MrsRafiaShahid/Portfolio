@@ -1,11 +1,12 @@
 /* eslint-disable no-unused-vars */
 const rafia = "/assets/rafia.jpeg";
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import "../../index.css";
 import { useFadeIn } from "../../utils/motion";
 import { TypedComponent } from "./TypedComponent";
-import {  animated } from "@react-spring/web";
+import { animated } from "@react-spring/web";
 import { useInView } from "react-intersection-observer";
+import { Button } from "../About/Button";
 
 const Hero = () => {
   const { ref: Ref, inView } = useInView({
@@ -49,10 +50,12 @@ const Hero = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
-          <Button title="Resume" />
-          <Link to="/about" className="block sm:hidden">
-            <Button title="Go to About" />
-          </Link>
+          <Button
+            title="Resume"
+            download
+            src="/assets/RafiaShahid_Fullstack_Internship_Resume.pdf"
+          />
+          <Button title="Go to About >>" to="/about" className="" />
         </div>
       </animated.div>
 
@@ -74,10 +77,10 @@ const Hero = () => {
 
 export default Hero;
 
-export const Button = ({ title }) => {
-  return (
-    <button className="bg-tertiary/80 text-secondary rounded-2xl px-6 py-2 font-semibold text-lg hover:bg-tertiary/100 hover:border-primary hover:border-2 transition-all duration-300 ease-in-out">
-      {title}
-    </button>
-  );
-};
+// export const Button = ({ title }) => {
+//   return (
+//     <button className="bg-tertiary/80 text-secondary rounded-2xl px-6 py-2 font-semibold text-lg hover:bg-tertiary/100 hover:border-primary hover:border-2 transition-all duration-300 ease-in-out">
+//       {title}
+//     </button>
+//   );
+// };

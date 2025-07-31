@@ -370,14 +370,14 @@ export const testimonials = [
   {
     testimonial:
       "Working with Rafia was seamless. She contributed high-quality code and communicated clearly throughout.",
-    name: "Ali Khan",
-    designation: "Collaborator on Open Source",
+    name: "Usama",
+    designation: "Collaborator on Open Source Project",
     company: "Riphah international University",
   },
   {
     testimonial:
       "Rafia shows a solid understanding of computer science, applies theory to practice well, and works with focus and discipline. She’s dependable and has strong potential in the tech industry.",
-    name: "Laiba Nadeem",
+    name: "Fatima Bukhari",
     designation: "Classmate in Web development",
     company: "Bano Qabil",
   },
@@ -398,7 +398,7 @@ export const testimonials = [
   {
     testimonial:
       "Rafia was quick to grasp new concepts and showed a real passion for clean code and design. A joy to mentor.",
-    name: "Muntansaar",
+    name: "Prof.Muntansaar",
     designation: "Web MERN Stack Mentor",
     company: "Bano Qabil",
   },
@@ -422,7 +422,7 @@ export const social = [
   {
     name: "linkedin",
     imgPath: linkedlin,
-    url: "https://www.linkedin.com/in/rafia-shahid-285b37374",
+    url: "https://www.linkedin.com/in/rafia-shahid-mern",
   },
   {
     name: "x",
