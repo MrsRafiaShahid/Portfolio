@@ -23,7 +23,7 @@ export const Button = ({ title, download = false, src = "", to = "" }) => {
   // Case 1: Navigation via React Router
   if (to && !download) {
     return (
-      <div className="green-pink-gradient rounded-2xl hover:translate-y-[-4px]  p-0.5 flex items-center">
+      <div className="green-pink-gradient rounded-2xl hover:translate-y-[-4px]  md:p-0.5 p-1 flex items-center">
         <Link
           to={to}
           className={`${buttonClass} bg-black`}

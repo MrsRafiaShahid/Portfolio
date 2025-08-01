@@ -32,7 +32,7 @@ const Hero = () => {
           </span>
 
         <p className="text-sm sm:text-base md:text-lg text-secondary text-justify max-w-xl hero-description">
-          I build scalable web apps with{" "}
+          I build scalable web apps with
           <strong>MongoDB, Express, React & Node.js</strong>. Passionate about
           crafting seamless user experiences and robust APIs.
         </p>
