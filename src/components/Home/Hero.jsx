@@ -28,7 +28,7 @@ const Hero = () => {
           <h1 className="text-2xl md:text-4xl mb-4 font-bold text-[#6B7280]">
             Hi, I'm &nbsp;<span className="text-gradient">Rafia Shahid</span>
           </h1>
-          <span className="text-2xl font-bold text-[#6B7280]">
+          <span className="text-base md:text-2xl font-bold text-[#6B7280]">
             <TypedComponent />
           </span>
         {/* </h1> */}

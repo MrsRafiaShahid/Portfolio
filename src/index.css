@@ -76,7 +76,6 @@ header {
 
 .head-text:hover,
 a:hover {
-  color: var(--color-primary);
   transition: color 0.5s ease-in-out;
   cursor: pointer;
 }
@@ -87,7 +86,7 @@ a:hover {
   line-height: 1.6;
 }
 .text-gradient {
-  background: linear-gradient(90deg, #4f1670, #FF6584);
+  background: linear-gradient(90deg, #00cea8, #bf61ff);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
