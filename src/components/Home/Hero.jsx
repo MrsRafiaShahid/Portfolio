@@ -24,14 +24,12 @@ const Hero = () => {
         ref={Ref}
         style={fade}
       >
-        {/* <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-primary"> */}
           <h1 className="text-2xl md:text-4xl mb-4 font-bold text-[#6B7280]">
             Hi, I'm &nbsp;<span className="text-gradient">Rafia Shahid</span>
           </h1>
           <span className="text-base md:text-2xl font-bold text-[#6B7280]">
             <TypedComponent />
           </span>
-        {/* </h1> */}
 
         <p className="text-sm sm:text-base md:text-lg text-secondary text-justify max-w-xl hero-description">
           I build scalable web apps with{" "}
@@ -45,7 +43,7 @@ const Hero = () => {
             download
             src="/assets/RafiaShahid_Fullstack_Internship_Resume.pdf"
           />
-          <Button title="Go to About" to="/about" />
+          <Button title="Hire Me" to="/contact" />
         </div>
       </animated.div>
 
