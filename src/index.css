@@ -80,6 +80,18 @@ a:hover {
   transition: color 0.5s ease-in-out;
   cursor: pointer;
 }
+.hero-description {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+.text-gradient {
+  background: linear-gradient(90deg, #4f1670, #FF6584);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
 
 /* Components */
 .card-border {

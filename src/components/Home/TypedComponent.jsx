@@ -8,8 +8,7 @@ export const TypedComponent = () => {
   React.useEffect(() => {
     const typed = new Typed(el.current, {
       strings: [
-        "<i> I'm Rafia</i> Shahid.",
-        "&amp; I'm  <span> Full Stack</span>(MERN) Developer.",
+        "Full Stack Developer | MERN Specialist",
       ],
       typeSpeed: 50,
       backSpeed: 30,

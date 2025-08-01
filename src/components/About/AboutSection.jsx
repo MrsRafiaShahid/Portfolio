@@ -1,4 +1,3 @@
-
 /* eslint-disable no-unused-vars */
 import { useSpring, animated } from "@react-spring/web";
 import { useInView } from "react-intersection-observer";
@@ -8,9 +7,9 @@ import { useFadeUp } from "../../utils/motion.js";
 import AboutBg from "./AboutBg.jsx";
 const AboutSection = () => {
   const [ref, inView] = useInView({ triggerOnce: false, threshold: 0.1 });
-  const titleSpring = useFadeUp(inView)
-  const paraSpring = useFadeUp(inView,300)
-  const videoSpring=useFadeUp(inView,400)
+  const titleSpring = useFadeUp(inView);
+  const paraSpring = useFadeUp(inView, 300);
+  const videoSpring = useFadeUp(inView, 400);
   return (
     <>
       <div
@@ -26,17 +25,25 @@ const AboutSection = () => {
           </h2>
         </animated.div>
         <div className="flex md:flex-row flex-col justify-center items-center gap-6">
-        
-        <animated.p
-        style={paraSpring}
-          className="mt-4 text-secondary text-[17px] max-w-3xl md:w-2/3 w-full leading-[30px]"
-        >
-         I am a passionate Full Stack Developer with hands-on experience in designing, developing, and maintaining web applications end-to-end. With expertise in the MERN stack — MongoDB, Express.js, React, and Node.js — I build responsive user interfaces and robust backend systems. Additionally, my strong foundation in C++ enhances my problem-solving skills and system-level development capabilities, enabling me to deliver high-performance, scalable solutions.
-        </animated.p>
-        <animated.div style={videoSpring} className="w-full m-auto h-1/4 mt-5 flex justify-center">
-          <AboutBg/>
-        </animated.div>
-          
+          <animated.p
+            style={paraSpring}
+            className="mt-4 text-secondary text-[17px] max-w-3xl md:w-2/3 w-full leading-[30px]"
+          >
+            I am a passionate <strong>Full Stack Developer </strong> 
+            with hands-on experience in designing, developing, and maintaining
+            web applications end-to-end. With expertise in the MERN stack —
+            <strong>MongoDB, Express.js, React, and Node.js</strong>— I build
+            responsive user interfaces and robust backend systems. Additionally,
+            my strong foundation in C++ enhances my problem-solving skills and
+            system-level development capabilities, enabling me to deliver
+            high-performance, scalable solutions.
+          </animated.p>
+          <animated.div
+            style={videoSpring}
+            className="w-full m-auto h-1/4 mt-5 flex justify-center"
+          >
+            <AboutBg />
+          </animated.div>
         </div>
         <div className="mt-10 text-secondary flex flex-wrap gap-10 mb-10 ">
           {services.map((service, index) => (

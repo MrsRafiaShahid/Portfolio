@@ -59,7 +59,7 @@ const Navbar = () => {
             >
               <img src={logo} alt="logo" className="w-10 h-10 rounded-full" />
               &nbsp;
-              <span className="flex items-center justify-center font-extrabold head-text">
+              <span className="flex items-center justify-center font-extrabold text-gradient head-text">
                 Rafia
               </span>
             </Link>
