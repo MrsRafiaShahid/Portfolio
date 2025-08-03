@@ -13,7 +13,7 @@ const Footer = () => {
             {social.map((social, index) => (
               <div key={index} className="icon">
                 <a href={social.url} target="_blank" rel="noopener noreferrer">
-                  <img src={social.imgPath} alt="social icon" />
+                  <img src={social.imgPath} alt="social icon" className="" />
                 </a>
               </div>
             ))}

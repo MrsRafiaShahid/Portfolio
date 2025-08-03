@@ -7,7 +7,6 @@ import { TypedComponent } from "./TypedComponent";
 import { animated } from "@react-spring/web";
 import { useInView } from "react-intersection-observer";
 import { Button } from "../About/Button";
-import Computer, { ComputerCanvas } from "../canvas/Computer";
 
 const Hero = () => {
   const { ref: Ref, inView } = useInView({
@@ -33,7 +32,7 @@ const Hero = () => {
 
         <p className="text-sm sm:text-base md:text-lg text-secondary text-justify max-w-xl hero-description">
           I build scalable web apps with
-          <strong>MongoDB, Express, React & Node.js</strong>. Passionate about
+          <strong> MongoDB, Express, React & Node.js</strong>. Passionate about
           crafting seamless user experiences and robust APIs.
         </p>
 
@@ -42,6 +41,7 @@ const Hero = () => {
             title="Resume"
             download
             src="/assets/RafiaShahid_Fullstack_Internship_Resume.pdf"
+            preview={true}
           />
           <Button title="Hire Me" to="/contact" />
         </div>

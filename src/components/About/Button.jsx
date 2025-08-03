@@ -1,6 +1,12 @@
 import { Link } from "react-router-dom";
 
-export const Button = ({ title, download = false, src = "", to = "" }) => {
+export const Button = ({
+  title,
+  download = false,
+  src = "",
+  to = "",
+  preview = false,
+}) => {
   const handleClick = (e) => {
     if (download && src) {
       e.preventDefault(); // Prevent default navigation if any
@@ -10,24 +16,26 @@ export const Button = ({ title, download = false, src = "", to = "" }) => {
       if (confirmDownload) {
         const link = document.createElement("a");
         link.href = src;
-        link.download = "RafiaShahid_Resume.pdf";
+        link.download =
+          "RafiaShahid_Fullstack_Internship_Resume.pdf";
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
       }
+    }
+    if (preview && src) {
+      e.preventDefault();
+      window.open(src, "_blank");
     }
   };
   const buttonClass =
     "px-6 py-2 transition-all transform duration-300 ease-in-out glow-effect  text-[#6B7280] rounded-xl text-white";
 
   // Case 1: Navigation via React Router
-  if (to && !download) {
+  if (to && !download && !preview) {
     return (
       <div className="green-pink-gradient rounded-2xl hover:translate-y-[-4px]  md:p-0.5 p-1 flex items-center">
-        <Link
-          to={to}
-          className={`${buttonClass} bg-black`}
-        >
+        <Link to={to} className={`${buttonClass} bg-black`}>
           {title}
         </Link>
       </div>

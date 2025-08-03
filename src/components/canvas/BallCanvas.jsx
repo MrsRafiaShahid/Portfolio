@@ -4,7 +4,7 @@ import "../../index.css"; // contains the glow animation
 const Ball = ({ icon }) => {
   return (
     <div className="ball-wrapper w-20 h-20 flex items-center justify-center">
-      <div className="ball w-16 h-16 rounded-full flex items-center justify-center">
+      <div className="ball glow-effect w-16 h-16 rounded-full flex items-center justify-center">
         <img
           src={icon}
           alt="tech-icon"

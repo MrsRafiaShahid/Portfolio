@@ -36,16 +36,8 @@ body {
 }
 
 .ball {
-  background-color: #151030;
-  transition: box-shadow 0.3s ease-in-out;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  background-color: #0c0c0c;
 }
-
-.ball:hover {
-  box-shadow: 0 0 15px 6px rgba(139, 92, 246, 0.6); /* violet glow */
-}
-
-
 
 .container {
   width: 100%;
@@ -66,7 +58,6 @@ header {
 
 /* Typography */
 .head-text {
-  color: var(--color-primary);
   font-size: 1.7rem;
   text-align: center;
   text-transform: uppercase;
@@ -110,34 +101,6 @@ a:hover {
   background-size: cover;
   background-position: center;
 }
-
-.about-card {
-  position: relative;
-  overflow: hidden;
-}
-
-.glow-overlay {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: conic-gradient(
-    from var(--glow-angle, 0deg),
-    rgba(255, 255, 255, 0.2),
-    transparent 30%,
-    transparent 70%,
-    rgba(255, 255, 255, 0.2)
-  );
-  mix-blend-mode: overlay;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  z-index: 0;
-  pointer-events: none;
-}
-
-.about-card:hover .glow-overlay {
-  opacity: 1;
-}
-
 .glow-effect {
   position: relative;
   transition: box-shadow 0.3s ease;
@@ -299,7 +262,7 @@ a:hover {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background-color: #090325;
+  background-color: #202020;
   position: absolute;
   top: 0;
 }
