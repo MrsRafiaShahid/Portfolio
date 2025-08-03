@@ -13,7 +13,7 @@ const FeedbackCard = ({
 }) => {
   const { ref, inView } = useInView({
     triggerOnce: false,
-    threshold: 0.2,
+    threshold: 0.3,
   });
 
   const [styles, api] = useSpring(() => ({
@@ -23,7 +23,7 @@ const FeedbackCard = ({
     if (inView) {
       api.start({
         to: { opacity: 1, transform: "translateY(0px)" },
-        config: { mass: 1, tension: 170, friction: 26 ,duration:200},
+        config: { mass: 1, tension: 170, friction: 26, duration: 200 },
         delay: index * 100,
         // immediate:true
       });
@@ -40,7 +40,9 @@ const FeedbackCard = ({
         style={styles}
         className="bg-[#0c0c0c] text-white mt-30 md:mt-25 h-fit rounded-3xl md:w-[320px] w-[250px]"
       >
-        <p className="text-[48px] px-4 bg-black/20  rounded-t-3xl text-white ">"</p>
+        <p className="text-[48px] px-4 bg-black/20  rounded-t-3xl text-white ">
+          "
+        </p>
         <div className="mt-1">
           <p className="text-white text-2xl px-4 py-2 tracking-wider text-[18px]">
             {testimonial}
