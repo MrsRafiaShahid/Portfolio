@@ -72,6 +72,7 @@ const ProjectCard = ({
         <animated.div
           className="w-full green-pink-gradient rounded-[20px] glow-effect shadow-card"
           ref={ref}
+          key={inView ? 'visible' :'hidden'}
           onMouseMove={handleMouseMove}
           onMouseLeave={handleMouseLeave}
           style={springStyles}

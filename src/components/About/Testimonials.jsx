@@ -9,7 +9,7 @@ import SectionWrapper from "../../hoc/SectionWrapper";
 const Testimonials = () => {
   const { ref, inView } = useInView({
     triggerOnce: false,
-    threshold: 0.3,
+    threshold: 0.5,
   });
   const [styles, api] = useSpring(() => ({
     from: { opacity: 1, y: 30 },
@@ -21,7 +21,6 @@ const Testimonials = () => {
         to: { opacity: 1, y: 0 },
         config: { mass: 1, tension: 200, friction: 30 },
         immdediate:true,
-        // delay: 0.1,
       });
     } else {
       api.start({ opacity: 0, y: 30 });

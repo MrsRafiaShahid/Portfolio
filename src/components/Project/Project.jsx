@@ -9,12 +9,12 @@ import { useFadeUp } from "../../utils/motion";
 import { SectionWrapper } from "../../hoc";
 
 const Project = () => {
-  const [ref, inView] = useInView({ triggerOnce: false, threshold: 0.3 });
+  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.3 });
   const titleSpring = useFadeUp(inView)
   const paraSpring = useFadeUp(inView,200)
   return (
     <>
-      <section className="">
+      <section>
         <animated.div style={titleSpring} ref={ref}>
           <p className="sm:text-[18px] text-[14px] text-gray-400 uppercase tracking-wider text-start">
             My Works

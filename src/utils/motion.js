@@ -43,12 +43,12 @@ export const useFadeUp = (inView, delay = 0) =>
     opacity: inView ? 1 : 0,
     transform: inView ? "translateY(0px)" : "translateY(20px)",
     delay,
-    config: { mass: 1, tension: 170, friction: 20 },
+    config: { mass: 1, tension: 120, friction: 14 },
   });
  export const useFadeIn = (inView, delay = 0) =>
   useSpring({
     opacity: inView ? 1 : 0,
     transform: inView ? "scale(1)" : "scale(0.95)",
     delay,
-    config: { mass: 1, tension: 170, friction: 20 },
+    config: { mass: 1, tension: 120, friction: 14 },
   });
